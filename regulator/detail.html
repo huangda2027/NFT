@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>杭州景色之一</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="../fontawesome/fontawesome-free-6.0.0-web/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="css/detail.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <section class="ant-layout">
+            <div class="container">
+                <div class="detail-img">
+                    <div class="detail-img-container">
+                        <div class="ant-img">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="info-container">
+                    <li>
+                        <label>作品名称</label>
+                        <h2 class="break-all"></h2>
+                    </li>
+
+                    <li>
+                        <label>创作者</label>
+                        <h2 class="break-all"></h2>
+                    </li>
+
+                    <li>
+                        <label>价格</label>
+                        <p class="font-bold">
+                            <span class="price"></span>
+                            <span>VNT</span>
+                        </p>
+                    </li>
+
+                    <li class="buy-button">
+                        <div class="buy">
+                            <button class="ant-button" onclick=""><span>举报</span></button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label>NFT ID</label>
+                        <p class="nftid"></p>
+                    </li>
+
+                    <li>
+                        <label>作品描述</label>
+                        <p class="content-hide">
+                        </p>
+                    </li>
+
+                    <li>
+                        <label>创作者信息</label>
+                        <p class="content-hide" style="line-height: 1.22rem;"></p>
+                    </li>
+                </ul>
+
+                <div class="ant-progress">
+                    <div class="text">事件记录</div>
+
+                    <div class="lc">
+                        <div class="flex-1">事件</div>
+                        <div class="flex-1">价格</div>
+                        <div class="flex-1">拥有者</div>
+                        <div class="flex-1 flex-right">日期</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
+    <script>
+        var complainBtn = document.querySelector(".ant-buttons");
+        var complainArea = document.querySelector(".complain-box");
+        complainBtn.addEventListener("click",function(){
+            complainArea.style.display = "block";
+        });
+        var closeBtn = document.querySelector(".close-btn");
+        closeBtn.addEventListener("click",function(){
+            complainArea.style.display = "none";
+        })
+        var submitBtn = document.querySelector(".line-buttons");
+        submitBtn.addEventListener("click",function(){
+            var nftId = localStorage.getItem("complainId");
+            var cause = document.getElementById("complains").value;
+            alert(cause);
+
+            var settings = {
+                "url": "http://localhost:8080/userFunction/addComplaint",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    "nftId": nftId,
+                    "cause": cause
+                }),
+            };
+
+            $.ajax(settings).done(function (response) {
+            console.log(response);
+            });
+        })
+        
+        var nftId = localStorage.getItem("inforId");
+        function buyNFT(){
+            alert("购买")
+            var settings = {
+                "url": "http://localhost:8080/NFTFunction/buyNFT?nftId="+nftId,
+                "method": "GET",
+                "headers": {
+                    "Authorization": localStorage.getItem("JWT")
+                },
+                "xhrFields": {
+                    withCredentials: true
+                },
+                "timeout": 0,
+            };
+      
+            $.ajax(settings).done(function (response) {
+             console.log(response);
+      });
+}
+    </script>
+</html>

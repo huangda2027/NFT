@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>首页</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <!-- jQuery响应式弹出层和对话框插插件 -->
+        <link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
+        <link href="css/index.css" rel="stylesheet" type="text/css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
+        <link href="../../fontawesome/fontawesome-free-6.0.0-web/css/all.min.css" rel="stylesheet" type="text/css">
+        <script src="../js/jquery-3.6.0.js"></script>
+    </head>
+
+    <body>
+        <header class="header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="main-nav">
+                            <a herf="" class="logo">
+                                <img src="picture/logo.png" alt="">
+                            </a>
+        
+                            <ul class="nav">
+                                <li><a href="../Market9/index.html">交易市场</a></li>
+                                <li><a href="../create/index2.html">作品上传</a></li>
+                                <li><a href="../center/index.html">私人博物馆</a></li>
+                                <li class="submenu">
+                                    <a href="javascript:;">中文</i></a>
+                                    <ul>
+                                        <li><a href="">中文</a></li>
+                                        <li><a href="">英文</a></li>
+                                        <!-- 做两个网页，一个中文，一个英文 -->
+                                    </ul>
+                                </li>
+                            </ul>
+        
+                            <a class="menu-trigger">
+                                <span>Menu</span>
+                            </a>
+                            
+                            <div class="loginBtn" style="display: block;">
+                                <ul class="header-buttons">
+                                    <li><a class="login-btn" href="javascript:;">登录/注册</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="loged" style="display: none;">
+                                <ul class="header-buttons">
+                                    <li><a class="login-btn"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="login-area" style="display: none;">
+            <div class="container">
+                <div class="close-area">
+                    <i class="fa fa-xmark"></i>
+                </div>
+
+                <div class="welcome">
+                    <div class="pinkbox">
+                        <div class="signup nodisplay">
+                            <h1>注册</h1>
+
+                            <form autocomplete="off" name="signing-form">
+                                <input type="text" placeholder="用户名">
+
+                                <input type="tel" placeholder="手机号码">
+
+                                <input type="password" placeholder="密码">
+
+                                <input type="password" placeholder="确认密码">
+
+                                <button class="button submit">创建账号 </button>
+                            </form>
+                        </div>
+
+                        <div class="signin">
+                            <h1>登录</h1>
+
+                            <form class="more-padding" autocomplete="off" name="login-form">
+                                <input type="text" id="userId" placeholder="用户名">
+
+                                <input type="password" id="userPassword" placeholder="密码">
+
+                                <div class="checkbox">
+                                    <input type="checkbox" id="remember" /><label for="remember">记住账号</label>
+                                </div>
+              
+                                
+                            </form>
+                            <button class="button submit" onclick="jump()">登录</button>
+                        </div>
+                    </div>
+
+                    <div class="leftbox">
+                        <h2 class="title"><span>BLOOM</span>&<br>BOUQUET</h2>
+
+                        <p class="desc">选择你最喜爱的 <span>艺术品</span></p>
+
+                        <img class="flower smaller" src="picture/flower.jpg" alt="">
+
+                        <p class="account">已经拥有了账号？</p>
+
+                        <button class="button" id="signin">登录</button>
+                    </div>
+                    
+                    <div class="rightbox">
+                        <h2 class="title"><span>BLOOM</span>&<br>BOUQUET</h2>
+
+                        <p class="desc">选择你最喜爱的 <span>艺术品</span></p>
+
+                        <img class="flower" src="picture/flower2.jpg"/>
+
+                        <p class="account">还没有账号？</p>
+
+                        <button class="button" id="signup">注册</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="welcome-area">
+            <div class="right-bg">
+                <img src="picture/home-pic.png" class="img-fluid float-right" alt="">
+            </div>
+
+            <div class="header-bg">
+                <img src="picture/header-bg.svg" class="img-fluid" alt="">
+            </div>
+
+            <div class="header-text">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-12 col-sm-12">
+                            <h1>选你所爱，许你 <span>未来</span>.</h1>
+                            <p>Proven methods to capture business priorities and goals as well as current pain points that enables measurable business outcomes.</p>
+                            <a href="" class="btn-primary-line white-part">创造</a>
+                            <a href="" class="btn-primary-line ml-70">交易市场</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 这里可以写一些如何创建一个NFT的方法 -->
+        <section class="section features-home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-12 animate__animated animate__slideInUp">
+                                <a href="" class="features-small-item">
+                                    <div class="icon">
+                                        <i class="fa fa-cloud"></i>
+                                    </div>
+                                    <h5 class="features-title">Cloud Solutions</h5>
+								    <p>Morbilling pharetra sapiening ut mattis viverra. Curabitur magna.</p>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                                <a href="" class="features-small-item">
+                                    <div class="icon">
+                                        <i class="fa fa-laptop"></i>
+                                    </div>
+                                    <h5 class="features-title">Network Services</h5>
+								    <p>Donec pellentesque turpis utium lorem imperdiet semper viverra.</p>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                                <a href="" class="features-small-item">
+                                    <div class="icon">
+                                        <i class="fa fa-video-camera"></i>
+                                    </div>
+                                    <h5 class="features-title">Webcast Services</h5>
+								    <p>Facilisis arcu ligula, malesuada id tincidunt laoreet, facilisis at justo.</p>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                                <a href="" class="features-small-item">
+                                    <div class="icon">
+                                        <i class="fa fa-server"></i>
+                                    </div>
+                                    <h5 class="features-title">Disaster Recovery</h5>
+								    <p>Proin arcu ligula, malesuada id tincidunt laoreet, facilisis at justo.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section padding-bottom-80 colored">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+                        <div class="left-heading">
+                            <h2 class="section-title">About the NFT</h2>
+                        </div>
+
+                        <div class="left-text">
+                            <p>Phasellus vitae velit sit amet diam semper commodo quis quis libero. Morbi consequat arcu augue, molestie faucibus metus ullamcorper vel.</p>
+                            
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <a class="btn-home" href="blue-features-single.html">
+                                        <i class="fa fa-angle-right"></i>
+                                        <span>NearCloud</span>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <a class="btn-home" href="blue-features-single.html">
+                                        <i class="fa fa-angle-right"></i>
+                                        <span>Office Cloud</span>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <a class="btn-home" href="blue-features-single.html">
+                                        <i class="fa fa-angle-right"></i>
+                                        <span>Backup Systems</span>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <a class="btn-home" href="blue-features-single.html">
+                                        <i class="fa fa-angle-right"></i>
+                                        <span>Hybrid Cloud</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-1"></div>
+
+                    <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+                        <img src="picture/blue-1.png" class="img-fluid d-block mx-auto" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section padding-bottom-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big">
+                        <img src="picture/blue-2.png" class="img-fluid d-block mx-auto" alt="">
+                    </div>
+
+                    <div class="col-lg-1"></div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+                        <div class="left-heading">
+                            <h2 class="section-title">Benifits of NFT</h2>
+                        </div>
+
+                        <div class="left-text">
+                            <p>Phasellus vitae velit sit amet diam semper commodo quis quis libero. Morbi consequat arcu augue, molestie faucibus metus ullamcorper vel.</p>
+                            
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <a class="btn-home active" href="blue-features-single.html">
+                                        <i class="fa fa-angle-right"></i>
+                                        <span>Web Design</span>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <a class="btn-home" href="blue-features-single.html">
+                                        <i class="fa fa-angle-right"></i>
+                                        <span>Mobile App Design</span>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <a class="btn-home" href="blue-features-single.html">
+                                        <i class="fa fa-angle-right"></i>
+                                        <span>Android Development</span>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <a class="btn-home" href="blue-features-single.html">
+                                        <i class="fa fa-angle-right"></i>
+                                        <span>iOS Development</span>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <a class="btn-home" href="blue-features-single.html">
+                                        <i class="fa fa-angle-right"></i>
+                                        <span>Back-End</span>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <a class="btn-home" href="blue-features-single.html">
+                                        <i class="fa fa-angle-right"></i>
+                                        <span>Front-End</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="parallax-counter">
+            <div class="parallax-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="count-item">
+                                <strong>96</strong>
+                                <span>NFT<br>Upload</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="count-item">
+                                <strong>190</strong>
+                                <span>Happy<br>Customer</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="count-item">
+                                <strong>6</strong>
+                                <span>Experienced<br>Staff</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="count-item">
+                                <strong>46</strong>
+                                <span>Trade<br>Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-part position-relative colored">
+            <div class="container">
+                <form>
+                    <div class="field">
+                      <input type="text" id="firstName" name="firstNameTextField" required>
+                      <label for="firstName">First Name</label>
+                    </div>
+                    <div class="field">
+                      <input type="text" id="lastName" name="lastNameTextField" required>
+                      <label for="lastName">Last Name</label>
+                    </div>
+                    <div class="field">
+                      <input type="text" id="email" name="emailTextField" required>
+                      <label for="email">Email</label>
+                    </div>
+                    <button>Send !</button>
+                  </form>
+            </div>
+        </section>
+
+        <footer class="ant-layout-footer footer">
+            <div class="footer-cont">
+                <div class="footer-wrapper">
+                    <div class="code-container">
+                        <div class="school-pic">
+                            <img src="picture/school.jfif">
+                        </div>
+
+                        <a href="javascript:;" >
+                            <i class="fa fa-school"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+                    </div>
+
+                    <div class="bor"></div>
+
+                    <div class="links">
+                        <a href="javascript:;" >
+                            <i class="fa fa-envelope"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+
+                        <a href="javascript:;" >
+                            <i class="fa-brands fa-weibo"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+
+                        <a href="javascript:;" >
+                            <i class="fa-brands fa-twitter-square"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+
+                        <a href="javascript:;" >
+                            <i class="fa fa-paper-plane"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+                    </div>
+
+                    <div class="bor"></div>
+
+                    <a href="#" class="logo">
+                        <img src="picture/logo.png" alt="" class="logo">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+    <script>
+        let signbtn = document.querySelector('.loginBtn');
+        let closebtn = document.querySelector('.close-area')
+        let loginarea = document.querySelector('.login-area');
+        signbtn.addEventListener('click', function(){
+            loginarea.style.display = "block";
+        })
+        closebtn.addEventListener('click',function(){
+            loginarea.style.display = "none";
+        })
+
+        let upbtn = document.querySelector('#signup');
+        let inbtn = document.querySelector('#signin');
+        let pinkbox = document.querySelector('.pinkbox');
+        let uparea = document.querySelector('.signup');
+        let inarea = document.querySelector('.signin');
+        upbtn.addEventListener('click',function(){
+            pinkbox.style.cssText = "transform:translateX(80%)";
+            inarea.classList.add('nodisplay');
+            uparea.classList.remove('nodisplay');
+        });
+        inbtn.addEventListener('click',function(){
+            pinkbox.style.cssText = "transform:translateX(0%)";
+            uparea.classList.add('nodisplay');
+            inarea.classList.remove('nodisplay');
+        });
+
+        function jump(){
+            var userId = document.forms["login-form"]["userId"].value;
+            var userPassword = document.forms["login-form"]["userPassword"].value;
+            var settings = {
+                "url": "http://localhost:8080/userFunction/login",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    "userId": userId,
+                    "userPassword": userPassword 
+                }),
+                "xhrFields": {
+                    withCredentials: true
+                }
+            };
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                localStorage.setItem("JWT", response.JWT);
+                localStorage.setItem("userId",response.userId);
+                alert(localStorage.getItem("userId"));
+                localStorage.setItem("userName",response.userName);
+                localStorage.setItem("userType",response.userType)
+                alert("登录成功！");
+                let loginArea = document.querySelector(".login-area");
+                loginArea.style.display = "none"
+                //alert(localStorage.getItem("JWT"));
+                var user = document.getElementsByClassName("login-btn")[1];
+                console.log(user);
+                user.innerHTML = response.userName;
+                let dl = document.querySelector(".loginBtn");
+                let ydl = document.querySelector(".loged");
+                ydl.style.display = "block";
+                dl.style.display = "none";
+            });
+            // $.ajax(settings).done(function (response) {
+            //     alert("fa")
+            //     console.log(response);
+            //     document.getElementById("show").innerHTML = JSON.stringify(response);
+            //     console.log(response.JWT);
+            //     // 存储JWT值，用于之后用户操作的验证
+            //     localStorage.setItem("JWT", response.JWT);
+            //     localStorage.setItem("userId",response.userId);
+            //     alert(localStorage.getItem("userId"));
+            //     localStorage.setItem("userName",response.userName);
+            //     localStorage.setItem("userType",response.userType)
+            //     alert("登录成功！");
+            //     alert(localStorage.getItem("JWT"));
+            //     var user = document.getElementsByClassName("login-btn")[1];
+            //     user.innerHTML = response.userName;
+            //     let dl = document.querySelector(".loginBtn");
+            //     let ydl = document.querySelector(".loged");
+            //     ydl.style.display = "block";
+            //     dl.style.display = "none";
+            // });
+        }
+
+        /* $(function () {
+            let show = 'show';
+  
+            $('input').on('checkval', function () {
+                let label = $(this).next('label');
+                if(this.value !== '') {
+                    label.addClass(show);
+                } 
+                else {
+                    label.removeClass(show);
+                }
+            }).on('keyup', function () {
+                $(this).trigger('checkval');
+            }); 
+        });*/
+    </script>
+</html>

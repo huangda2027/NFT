@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ECharts</title>
+    <!-- 引入刚刚下载的 ECharts 文件 -->
+    <script src="js/echarts.js"></script>
+  </head>
+  <body>
+    <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+    <div id="sales-chart" style="width: 920px;min-height:365px;"></div>
+    <script type="text/javascript">
+      // 基于准备好的dom，初始化echarts实例
+      var salesChart = echarts.init(document.getElementById('sales-chart'));
+
+      // 指定图表的配置项和数据
+      var option = {
+    tooltip: {},
+    legend: [{
+      data: ["买入", "卖出"],
+      bottom: 0
+    }],
+    animationDuration: 1500,
+    animationEasingUpdate: "quinticInOut",
+    series: [
+    {
+      name: "交易参与者",
+      type: "graph",
+      layout: "none",
+      data: [{
+        id: "0",
+        name: "one",
+        symbolSize: 12,
+        x: Math.random()*920-460,
+        y: Math.random()*365-182,
+        value: 12,
+        category: 0
+      }, {
+        id: "1",
+        name: "two",
+        symbolSize: 90,
+        x: Math.random()*920-460,
+        y: Math.random()*365-182,
+        value: 90,
+        category: 0,
+      }, {
+        id: "2",
+        name: "MlleBaptistine",
+        symbolSize: 63,
+        x: Math.random()*920-460,
+        y: Math.random()*365-182,
+        value: 63,
+        category: 1
+      }, {
+        id: "3",
+        name: "MmeMagloire",
+        symbolSize: 63,
+        x: Math.random()*920-460,
+        y: Math.random()*365-182,
+        value: 63,
+        category: 1
+      }, {
+        id: "4",
+        name: "CountessDeLo",
+        symbolSize: 26,
+        x: Math.random()*920-460,
+        y: Math.random()*365-182,
+        value: 26,
+        category: 0
+      }, {
+        id: "5",
+        name: "Geborand",
+        symbolSize: 27,
+        x: Math.random()*920-460,
+        y: Math.random()*365-182,
+        value: 27,
+        category: 0
+      }, {
+        id: "6",
+        name: "Champtercier",
+        symbolSize: 28,
+        x: Math.random()*920-460,
+        y: Math.random()*365-182,
+        value: 28,
+        category: 0
+      }],
+      links: [{
+        id: "0",
+        source: "1",
+        target: "0"
+      }, {
+        id: "1",
+        source: "2",
+        target: "0"
+      }, {
+        id: "2",
+        source: "3",
+        target: "0"
+      }, {
+        id: "3",
+        source: "3",
+        target: "2"
+      }, {
+        id: "4",
+        source: "4",
+        target: "0"
+      }, {
+        id: "5",
+        source: "5",
+        target: "0"
+      }, {
+        id: "6",
+        source: "6",
+        target: "0"
+      }, ],
+      categories: [{
+        name: "买入"
+      }, {
+        name: "卖出"
+      }]
+    }],
+    lineStyle: {
+          color: 'source',
+          curveness: 0.3
+        },
+        emphasis: {
+          focus: 'adjacency',
+          lineStyle: {
+            width: 10
+          }
+        }
+  };
+
+      // 使用刚指定的配置项和数据显示图表。
+      salesChart.setOption(option);
+    </script>
+  </body>
+</html>

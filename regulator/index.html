@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>管理员界面-数据统计</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="../fontawesome/fontawesome-free-6.0.0-web/css/all.min.css">
+        <link rel="stylesheet" href="css/index.css" type="text/css">
+        <!-- <script src="js/echarts.js"></script> -->
+    </head>
+
+    <body>
+        <div class="menu">
+            <div class="menu-header">
+                <a href="" class="menu-header-logo">
+                    <img src="picture/nft1.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="menu-body" style="overflow: hidden; outline: none; cursor: grab; touch-action: none;">
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center">
+                        <div class="avatar me-3">
+                            <img src="picture/photo.jpg" class="rounded-circle" alt="">
+                        </div>
+
+                        <div>
+                            <div class="fw-bold">Regulator</div>
+                            <small class="text-muted">Regulator</small>
+                        </div>
+                    </a>
+                </div>
+
+                <ul>
+                    <li>
+                        <a class="active" href="#">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-store"></i>
+                            </span>
+                            <span>交易市场</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="nft-mon.html">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-check-to-slot"></i>
+                            </span>
+                            <span>NFT监管</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="user-mon.html">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-user-check"></i>
+                            </span>
+                            <span>用户监管</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="trans-mon.html">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </span>
+                            <span>交易监管</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layout-wrapper">
+            <div class="header">
+                <div class="page-title">交易市场</div>
+            </div>
+
+            <div class="ant-layout main" id="normal"> 
+                <div class="container">
+                    <div class="nft-container">
+                        <article class="things-wrapper" style="width: 31%;">
+                            <div class="things-container">
+                                <div class="picture-container">
+                                    <img src="picture/photo.jpg">
+                                </div>
+    
+                                <div class="inf-container">
+                                    <article class="words-container">
+                                        <p class="name">杭州景色之一</p>
+                                        <p class="authorName">孔王兴</p>
+                                    </article>
+    
+                                    <div class="fov-right-box">
+                                        <div class="favour">
+                                            <a class="heart"><img src="picture/redheart.png"></a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="sell-tag">
+                                    <img src="picture/selling.png" style="width: 0.87rem;">
+                                    <span class="sale-text">出售中</span>
+                                </div>
+                            </div>
+                        </article>
+    
+                        <article class="things-wrapper" style="width: 31%;">
+                            <div class="things-container">
+                                <div class="picture-container">
+                                    <img src="picture/photo.jpg">
+                                </div>
+    
+                                <div class="inf-container">
+                                    <article class="words-container">
+                                        <p class="name">杭州景色之二</p>
+                                        <p class="authorName">孔王兴</p>
+                                    </article>
+    
+                                    <div class="fov-right-box">
+                                        <div class="favour">
+                                            <a class="heart"><img src="picture/heart.png"></a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="sell-tag">
+                                    <img src="picture/selling.png" style="width: 0.87rem;">
+                                    <span class="sale-text">出售中</span>
+                                </div>
+                            </div>
+                        </article>
+    
+                        <article class="things-wrapper" style="width: 31%;">
+                            <div class="things-container">
+                                <div class="picture-container">
+                                    <img src="picture/photo.jpg">
+                                </div>
+    
+                                <div class="inf-container">
+                                    <article class="words-container">
+                                        <p class="name">杭州景色之三</p>
+                                        <p class="authorName">孔王兴</p>
+                                    </article>
+    
+                                    <div class="fov-right-box">
+                                        <div class="favour">
+                                            <a class="heart"><img src="picture/heart.png"></a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="sell-tag">
+                                    <img src="picture/selling.png" style="width: 0.87rem;">
+                                    <span class="sale-text">出售中</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="mt-4">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="#">
+                            <span>&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">
+                            <span>&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+</html>

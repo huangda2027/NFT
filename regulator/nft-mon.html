@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>监管者-NFT监管</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="../fontawesome/fontawesome-free-6.0.0-web/css/all.min.css">
+        <link rel="stylesheet" href="css/nft-mon.css" type="text/css">
+        <script src="js/nft.js"></script>
+        <script src="js/echarts.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        
+    </head>
+
+    <body>
+        <div class="menu">
+            <div class="menu-header">
+                <a href="" class="menu-header-logo">
+                    <img src="picture/nft1.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="menu-body" style="overflow: hidden; outline: none; cursor: grab; touch-action: none;">
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center">
+                        <div class="avatar me-3">
+                            <img src="picture/photo.jpg" class="rounded-circle" alt="">
+                        </div>
+
+                        <div>
+                            <div class="fw-bold">Regulator</div>
+                            <small class="text-muted">Regulator</small>
+                        </div>
+                    </a>
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-store"></i>
+                            </span>
+                            <span>交易市场</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="active" href="#">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-check-to-slot"></i>
+                            </span>
+                            <span>NFT监管</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="user-mon.html">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-user-check"></i>
+                            </span>
+                            <span>用户监管</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="trans-mon.html">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </span>
+                            <span>交易监管</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layout-wrapper">
+            <div class="header">
+                <div class="page-title">NFT监管</div>
+
+                <form class="search-form">
+                    <div class="input-group">
+                        <button class="btn btn-outline-light" type="button" id="button-addon1" onclick="get()">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+
+                        <input type="text" class="form-control" placeholder="搜索...">
+                    </div>
+                </form>
+            </div>
+
+            <div class="content">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="card widget h-100">
+                            <div class="card-header d-flex">
+                                <h6 class="card-title">
+                                    NFT拥有者变更
+                                </h6>
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-md-flex align-items-center mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="display-7 me-3">
+                                            <i class="fa-solid fa-dolly me-2 text-purple"></i> 10
+                                        </div>
+                                        <span class="text-purple">交易次数</span>
+                                    </div>
+                                </div>
+
+                                <div id="sales-chart" style="width: 1075px; min-height: 365px"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 col-md-12">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex mb-3">
+                                    <div class="display-7">
+                                        <i class="fa-solid fa-money-bill-1-wave text-purple"></i> <span class="h4">NFT价格</span>
+                                    </div>
+                                </div>
+                                <div id="price-chart" style="width: 627px; height: 300px"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-md-12">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex mb-3">
+                                    <div class="display-7">
+                                        <i class="fa-solid fa-layer-group text-purple"></i> <span class="h4">NFT状态</span>
+                                    </div>
+                                </div>
+                                <div id="status-chart" style="width: 447px; height: 300px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var salesData = [];
+            var salesLink = [];
+            var priceX = [];
+            var priceSeries = [];
+            var statusX = [];
+            var statusSeries = [];
+
+            function get() {
+                var formControl = document.querySelector(".form-control");
+                var nftId = formControl.value ;
+                var settings = {
+                    "url": "http://localhost:8080/SwitchLogFunction/SearchNFTLog_Owner?nftId="+nftId,
+                    "method": "GET",
+                    "timeout": 0,
+                    "xhrFields": {
+                        withCredentials: true
+                    },
+                };
+                
+                $.ajax(settings).done(function (response) {
+                    console.log(response);
+                    salelen = getJsonLength(response);
+                    salesData[0] = new Object();
+                    salesData[0].id = "0";
+                    salesData[0].name = response[0].author;
+                    salesData[0].symbolSize = response[0].price;
+                    salesData[0].x = Math.random()*920-460;
+                    salesData[0].y = Math.random()*365-182;
+                    salesData[0].value = response[0].value;
+                    salesData[0].category = 0;
+                    console.log("salelen"+salelen)
+                    for(var i=0; i<salelen-1; i++) {
+                        console.log("in")
+                        salesData[i+1] = new Object();
+                        salesData[i+1].id = 1+"";
+                        salesData[i+1].name = response[i].author;
+                        console.log("mingzi"+response[i].author);
+                        salesData[i+1].symbolSize = response[i+1].price;
+                        salesData[i+1].x = Math.random()*920-460;
+                        salesData[i+1].y = Math.random()*365-182;
+                        salesData[i+1].value = response[i+1].value;
+                        salesData[i+1].category = 0;
+                    }
+                    console.log(salesData)
+                    salesData[salelen] = new Object();
+                    salesData[salelen].id = salelen+"";
+                    salesData[salelen].name = response[salelen-1].author;
+                    salesData[salelen].symbolSize = response[salelen-1].price;
+                    salesData[salelen].x = Math.random()*920-460;
+                    salesData[salelen].y = Math.random()*365-182;
+                    salesData[salelen].value = response[salelen-1].value;
+                    salesData[salelen].category = 1;
+
+
+                    salesLink[0] = new Object();
+                    salesLink[0].id = '0';
+                    salesLink[0].source = '0';
+                    for(var i=0; i<salelen; i++) {
+                        if(i==0) {
+                            salesLink[i].target = i;
+                        }
+                        else {
+                            console.log("此时i="+i)
+                            salesLink[i] = new Object();
+                            salesLink[i].id = i;
+                            salesLink[i].source = i-1;
+                            salesLink[i].target = i;
+                        }
+                    }
+                    console.log("===============");
+                    console.log(salesLink);
+                    console.log("===============");
+                });
+
+                var settings = {
+                    "url": "http://localhost:8080/SwitchLogFunction/SearchNFTLog_Price?nftId="+nftId,
+                    "method": "GET",
+                    "timeout": 0,
+                    "xhrFields": {
+                        withCredentials: true
+                    },
+                }
+
+                $.ajax(settings).done(function (response) {
+                    console.log(response);
+                    for(var i=0; i<getJsonLength(response); i++) {
+                        priceX[i] = response[i].time;
+                        priceSeries[i] = parseInt(response[i].value)+'';
+                        console.log(parseInt(response[i].value))
+                        //priceSeries[i] = parseInt(response[i].value);
+                        　
+                    }
+                });
+
+                var settings = {
+                    "url": "http://localhost:8080/SwitchLogFunction/SearchNFTLog_Condition?nftId="+nftId,
+                    "method": "GET",
+                    "timeout": 0,
+                    "xhrFields": {
+                        withCredentials: true
+                    },
+                };
+                
+                $.ajax(settings).done(function (response) {
+                    console.log(response);
+                    for(var i=0; i<getJsonLength(response); i++) {
+                        statusX[i] = response[i].time;
+                        //statusSeries[i] = response[i].value;
+                        statusSeries[i] = "珍藏";
+                    }
+                });
+            }
+
+            function getJsonLength(jsonData) {
+                var jsonLength = 0;
+                for (var item in jsonData) {
+                    jsonLength++;
+                }
+                return jsonLength;
+            }
+
+            var salesChart = echarts.init(document.getElementById('sales-chart'));
+            var option = {
+                tooltip: {},
+                legend: [{
+                    data: ["卖出", "买入"],
+                    bottom: 0
+                }],
+                animationDuration: 1500,
+                animationEasingUpdate: "quinticInOut",
+                color: ['#6a30d1','#5c83e3'],
+                
+                series: [{
+                    name: "交易参与者",
+                    type: "graph",
+                    layout: "none",
+                    roam: true,
+                    data: salesData,
+                    links: salesLink,
+                    categories: [
+                        {
+                            name: "买入",
+                            itemStyle: {
+                                color: "#6a30d1"
+                            }
+                        }, 
+                        {
+                            name: "卖出",
+                            itemStyle: {
+                                color: "#5c83e3"
+                            }
+                        }
+                    ]
+                }],
+                lineStyle: {
+                    color: 'source',
+                curveness: 0.3
+                },
+                emphasis: {
+                    focus: 'adjacency',
+                    lineStyle: {
+                        width: 10
+                    }
+                }
+            };
+            console.log("===============");
+            console.log(salesData)
+            console.log("===============")
+            salesChart.setOption(option);
+            var priceChart = echarts.init(document.getElementById('price-chart'));
+            var option = 
+            {
+                tooltip: {
+                    trigger: 'axis'
+                },
+                dataZoom: [
+                    {
+                        id: 'dataZoomX',
+                        type: 'slider',
+                        xAxisIndex: [0],
+                        filterMode: 'filter'
+                    }
+                ],
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: priceX
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                color: ['#5c83e3'],
+                series: [
+                    {
+                        name: '价格',
+                        type: 'line',
+                        data: priceSeries,
+                        markPoint: {
+                            data: [
+                                { type: 'max', name: 'Max' },
+                                { type: 'min', name: 'Min' }
+                            ]
+                        },
+                        markLine: { data: [{ type: 'average', name: 'Avg' }] }
+                    }
+                ]
+            };
+            priceChart.setOption(option);
+            var statusChart = echarts.init(document.getElementById("status-chart"));
+            var option = {
+                tooltip: {},
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                dataZoom: [
+                    {
+                        id: 'dataZoomX',
+                        type: 'slider',
+                        xAxisIndex: [0],
+                        filterMode: 'filter'
+                    }
+                ],
+                xAxis: {
+                    type: 'category',
+                    data: statusX,
+                    boundaryGap: false
+                },
+                yAxis: {
+                    type: 'category',
+                    data: ['上架', '珍藏']
+                },
+                series: [
+                    {
+                        type: 'line',
+                        step: 'end',
+                        data: ['珍藏', '上架', '上架', '珍藏', '上架', '珍藏', '珍藏']
+                    }
+                ]
+            }
+            statusChart.setOption(option);
+        </script>
+    </body>
+
+    
+</html>

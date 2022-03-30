@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>监管者-用户监管</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="../fontawesome/fontawesome-free-6.0.0-web/css/all.min.css">
+        <link rel="stylesheet" href="css/user.css" type="text/css">
+        <script src="../js/jquery-3.6.0.js"></script>
+        <script src="js/user.js"></script>
+    </head>
+
+    <body>
+        <div class="menu">
+            <div class="menu-header">
+                <a href="" class="menu-header-logo">
+                    <img src="picture/nft1.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="menu-body" style="overflow: hidden; outline: none; cursor: grab; touch-action: none;">
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center">
+                        <div class="avatar me-3">
+                            <img src="picture/photo.jpg" class="rounded-circle" alt="">
+                        </div>
+
+                        <div>
+                            <div class="fw-bold">Regulator</div>
+                            <small class="text-muted">Regulator</small>
+                        </div>
+                    </a>
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-store"></i>
+                            </span>
+                            <span>交易市场</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="nft-mon.html">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-check-to-slot"></i>
+                            </span>
+                            <span>数字艺术品监管</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="active" href="#">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-user-check"></i>
+                            </span>
+                            <span>用户监管</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="trans-mon.html">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </span>
+                            <span>交易监管</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layout-wrapper">
+            <div class="header">
+                <div class="page-title">用户监管</div>
+
+                <form class="search-form">
+                    <div class="input-group">
+                        <button class="btn btn-outline-light" type="button" id="button-addon1" onclick="get()">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+
+                        <input type="text" class="form-control" placeholder="搜索...">
+                    </div>
+                </form>
+            </div>
+
+            <div class="content">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-md-flex gap-4 align-items-center">
+                            <div class="d-none d-md-flex">用户所有活动记录</div>
+                            <div class="d-md-flex gap-4 align-items-center">
+                                <form class="mb-3 mb-md-0">
+                                    <div class="row g-4">
+                                        <div class="col-md-3">
+                                            <select class="form-select">
+                                                <option value="asc">升序</option>
+                                                <option value="desc">降序</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <select class="form-select">
+                                                <option value="nftname">序号</option>
+                                                <option value="date">操作日期</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="搜索">
+
+                                                <button class="btn btn-outline-light" type="button">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive" style="overflow: hidden; outline: none;">
+                    <table class="table table-custom table-lg mb-0" id="checks">
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>用户操作</th>
+                                <th>操作hash</th>
+                                <th class="text-end">操作日期</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="main-part">
+                            <!-- <tr>
+                                <td>1</td>
+                                <td>上架了《XXXXXX》</td>
+                                <ta>...</ta>
+                                <td class="text-end">2022.3.14</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <nav class="mt-4">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#">
+                                <span>&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">
+                                <span>&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </body>
+</html>

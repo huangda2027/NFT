@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>鉴定机构</title>
+  		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+  		<link rel="stylesheet" href="css/font-awesome.min.css">
+  		<link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            .hide{
+                display: none;
+            }
+        </style>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="../js/jquery-3.6.0.js"></script>
+        <script src="js/institutionCheck.js"></script>
+       
+    </head>
+
+    <body>
+        <div class="main-part">
+            <div class="body d-flex">
+                <div class="container-xxl p-0">
+                    <div class="row g-0">
+                        <div class="col-12 d-flex">
+                            <div class="card card-chat border-right border-top-0 border-bottom-0 w380">
+                                <div class="px-4 py-3 py-md-4">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control mb-1" placeholder="搜索...">
+                                    </div>
+
+                                    <div class="nav nav-pills justify-content-between text-center">
+                                        <a class="flex-fill rounded border-0 nav-link active">待审核</a>
+                                        <a class="flex-fill rounded border-0 nav-link">历史审核</a>
+                                        <a class="flex-fill rounded border-0 nav-link">审核通过</a>
+                                    </div>
+                                </div>
+
+                                <div class="tab-content border-top">
+                                    <div class="tab-pane show active" id="not-yet">
+                                        <ul class="list-unstyled list-group list-group-custom list-group-flush mb-0">
+                                            <!-- <li class="list-group-item px-md-4 py-3 py-md-4">
+                                                <a href="javascript:;" class="d-flex">
+                                                    <img class="avatar rounded-circle" src="picture/photo.jpg" alt="">
+
+                                                    <div class="flex-fill ms-3 text-truncate">
+                                                        <h6 class="d-flex justify-content-between mb-0">
+                                                            <span>DDBS</span> <small class="msg-time">2022.3.18</small>
+                                                        </h6>
+                                                        <span class="text-muted">《XXXX》</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="list-group-item px-md-4 py-3 py-md-4">
+                                                <a href="javascript:;" class="d-flex">
+                                                    <img class="avatar rounded-circle" src="picture/photo.jpg" alt="">
+
+                                                    <div class="flex-fill ms-3 text-truncate">
+                                                        <h6 class="d-flex justify-content-between mb-0">
+                                                            <span>DDBS</span> <small class="msg-time">2022.3.18</small>
+                                                        </h6>
+                                                        <span class="text-muted">《XXXX》</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="list-group-item px-md-4 py-3 py-md-4">
+                                                <a href="javascript:;" class="d-flex">
+                                                    <img class="avatar rounded-circle" src="picture/photo.jpg" alt="">
+
+                                                    <div class="flex-fill ms-3 text-truncate">
+                                                        <h6 class="d-flex justify-content-between mb-0">
+                                                            <span>DDBS</span> <small class="msg-time">2022.3.18</small>
+                                                        </h6>
+                                                        <span class="text-muted">《XXXX》</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="list-group-item px-md-4 py-3 py-md-4">
+                                                <a href="javascript:;" class="d-flex">
+                                                    <img class="avatar rounded-circle" src="picture/photo.jpg" alt="">
+
+                                                    <div class="flex-fill ms-3 text-truncate">
+                                                        <h6 class="d-flex justify-content-between mb-0">
+                                                            <span>DDBS</span> <small class="msg-time">2022.3.18</small>
+                                                        </h6>
+                                                        <span class="text-muted">《XXXX》</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="list-group-item px-md-4 py-3 py-md-4">
+                                                <a href="javascript:;" class="d-flex">
+                                                    <img class="avatar rounded-circle" src="picture/photo.jpg" alt="">
+
+                                                    <div class="flex-fill ms-3 text-truncate">
+                                                        <h6 class="d-flex justify-content-between mb-0">
+                                                            <span>DDBS</span> <small class="msg-time">2022.3.18</small>
+                                                        </h6>
+                                                        <span class="text-muted">《XXXX》</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="list-group-item px-md-4 py-3 py-md-4">
+                                                <a href="javascript:;" class="d-flex">
+                                                    <img class="avatar rounded-circle" src="picture/photo.jpg" alt="">
+
+                                                    <div class="flex-fill ms-3 text-truncate">
+                                                        <h6 class="d-flex justify-content-between mb-0">
+                                                            <span>DDBS</span> <small class="msg-time">2022.3.18</small>
+                                                        </h6>
+                                                        <span class="text-muted">《XXXX》</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="list-group-item px-md-4 py-3 py-md-4">
+                                                <a href="javascript:;" class="d-flex">
+                                                    <img class="avatar rounded-circle" src="picture/photo.jpg" alt="">
+
+                                                    <div class="flex-fill ms-3 text-truncate">
+                                                        <h6 class="d-flex justify-content-between mb-0">
+                                                            <span>DDBS</span> <small class="msg-time">2022.3.18</small>
+                                                        </h6>
+                                                        <span class="text-muted">《XXXX》</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="list-group-item px-md-4 py-3 py-md-4">
+                                                <a href="javascript:;" class="d-flex">
+                                                    <img class="avatar rounded-circle" src="picture/photo.jpg" alt="">
+
+                                                    <div class="flex-fill ms-3 text-truncate">
+                                                        <h6 class="d-flex justify-content-between mb-0">
+                                                            <span>DDBS</span> <small class="msg-time">2022.3.18</small>
+                                                        </h6>
+                                                        <span class="text-muted">《XXXX》</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="list-group-item px-md-4 py-3 py-md-4">
+                                                <a href="javascript:;" class="d-flex">
+                                                    <img class="avatar rounded-circle" src="picture/photo.jpg" alt="">
+
+                                                    <div class="flex-fill ms-3 text-truncate">
+                                                        <h6 class="d-flex justify-content-between mb-0">
+                                                            <span>DDBS</span> <small class="msg-time">2022.3.18</small>
+                                                        </h6>
+                                                        <span class="text-muted">《XXXX》</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="list-group-item px-md-4 py-3 py-md-4">
+                                                <a href="javascript:;" class="d-flex">
+                                                    <img class="avatar rounded-circle" src="picture/photo.jpg" alt="">
+
+                                                    <div class="flex-fill ms-3 text-truncate">
+                                                        <h6 class="d-flex justify-content-between mb-0">
+                                                            <span>DDBS</span> <small class="msg-time">2022.3.18</small>
+                                                        </h6>
+                                                        <span class="text-muted">《XXXX》</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="list-group-item px-md-4 py-3 py-md-4">
+                                                <a href="javascript:;" class="d-flex">
+                                                    <img class="avatar rounded-circle" src="picture/photo.jpg" alt="">
+
+                                                    <div class="flex-fill ms-3 text-truncate">
+                                                        <h6 class="d-flex justify-content-between mb-0">
+                                                            <span>DDBS</span> <small class="msg-time">2022.3.18</small>
+                                                        </h6>
+                                                        <span class="text-muted">《XXXX》</span>
+                                                    </div>
+                                                </a>
+                                            </li> -->
+<!-- 
+                                            <li class="list-group-item px-md-4 py-3 py-md-4">
+                                                <a href="javascript:;" class="d-flex">
+                                                    <img class="avatar rounded-circle" src="picture/photo.jpg" alt="">
+
+                                                    <div class="flex-fill ms-3 text-truncate">
+                                                        <h6 class="d-flex justify-content-between mb-0">
+                                                            <span>DDBS</span> <small class="msg-time">2022.3.18</small>
+                                                        </h6>
+                                                        <span class="text-muted">《XXXX》</span>
+                                                    </div>
+                                                </a>
+                                            </li> -->
+                                        </ul>
+                                    </div>
+
+                                    <div class="tab-pane hide" id="history">
+                                        <ul class="list-unstyled list-group list-group-custom list-group-flush mb-0">
+                                            <li class="list-group-item px-md-4 py-3 py-md-4">
+                                                <a href="javascript:;" class="d-flex">
+                                                    <span class="avatar rounded-circle text-success">PASS</span>
+
+                                                    <div class="flex-fill ms-3 text-truncate">
+                                                        <h6 class="d-flex justify-content-between mb-0">
+                                                            <span>DDBS</span> <small class="msg-time">2022.3.18</small>
+                                                        </h6>
+                                                        <span class="text-muted">《XXXX》</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li class="list-group-item px-md-4 py-3 py-md-4">
+                                                <a href="javascript:;" class="d-flex">
+                                                    <span class="avatar rounded-circle text-danger">FAIL</span>
+
+                                                    <div class="flex-fill ms-3 text-truncate">
+                                                        <h6 class="d-flex justify-content-between mb-0">
+                                                            <span>DDBS</span> <small class="msg-time">2022.3.18</small>
+                                                        </h6>
+                                                        <span class="text-muted">《XXXX》</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tab-pane hide" id="pass-part">
+                                        <ul class="list-unstyled list-group list-group-custom list-group-flush mb-0">
+                                            <li class="list-group-item px-md-4 py-3 py-md-4">
+                                                <a href="javascript:;" class="d-flex">
+                                                    <img class="avatar rounded-circle" src="picture/photo.jpg">
+
+                                                    <div class="flex-fill ms-3 text-truncate">
+                                                        <div class="d-flex justify-content-between mb-0">
+                                                            <h6 class="mb-0">DDBS</h6>
+
+                                                            <div class="text-muted">
+                                                                <i class="fa fa-arrow-rotate-left pl-2 text-danger"></i>
+                                                            </div>
+                                                        </div>
+
+                                                        <span class="text-muted">《XXXXXX》</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-chat-body border-0 w-100 px-4 px-md-5 py-3 py-md-4">
+                                <div class="info-header d-flex justify-content-between align-items-center border-bottom pb-3">
+                                    <div class="d-flex">
+                                        <a href="javascript:;" title="">
+                                            <img class="avatar" src="picture/nft1.png">
+                                        </a>
+
+                                        <div class="ms-3">
+                                            <h5 class="mb-0 pt-1">作品证书审核</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="info-body list-unstyled mb-0 py-lg-5 py-md-4 py-3 flex-grow-1">
+                                    <div class="container">
+                                        <ul class="info-container">
+                                            <li>
+                                                <label>作品名称</label>
+                                                <h2 class="break-all"></h2>
+                                            </li>
+    
+                                            <li>
+                                                <label>创作者</label>
+                                                <h2 class="break-all"></h2>
+                                            </li>
+    
+                                            <li>
+                                                <label>价格</label>
+                                                <p class="font-bold">
+                                                    <span class="price"></span>
+                                                    <span>VNT</span>
+                                                </p>
+                                            </li>
+    
+                                            <li>
+                                                <label>nftID</label>
+                                                <p class="nftid"></p>
+                                            </li>
+    
+                                            <li>
+                                                <label>申请描述</label>
+                                                <p class="content-hide"></p>
+                                            </li>
+                                        </ul>
+    
+                                        <div class="detail-img">
+                                            <div class="detail-img-container">
+                                                <div class="ant-img">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="info-message">
+                                        <textarea class="form-control" placeholder="输入评价..."></textarea>
+                                    </div>
+
+                                    <div class="info-btn">
+                                        <a href="javascript:;" class="btn btn-circle" id="refuse-btn">驳回申请</a>
+                                        <a href="javascript:;" class="btn btn-circle ml-10" id="pass-btn">生成证书</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <script>
+        var navlink = document.querySelectorAll(".nav-link");
+        var tabPane = document.querySelectorAll(".tab-pane");
+        for (var i = 0; i < navlink.length; i++) {
+        navlink[i].index = i;
+        navlink[i].onclick = function () {　　　　　　　　　　//对当前点击的按钮赋予active类名及显示当前按钮对应的内容
+            for (var j = 0; j < navlink.length; j++) {
+                navlink[j].className = navlink[j].className.replace(' active', '').trim();
+                //tabPane[j].className = tabPane[j].className.replace(' show', ' hide').trim();
+                //tabPane[j].setAttribute("class", "tabPane fade");
+                tabPane[j].setAttribute("class", "tabPane hide");
+            }
+            this.className = this.className + ' active';
+            tabPane[this.index].setAttribute("class", "tabPane show active")
+            console.log(this.index);
+            //tabPane[this.index].className = tabPane[this.index].className + ' show';
+        };
+
+    }
+    </script>
+</html>

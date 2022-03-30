@@ -1,0 +1,282 @@
+/* for-them-all start */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
+s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+figure, header, nav, section, article, aside, footer, figcaption 
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+html,body 
+{
+    background: #fff;
+    color: #6F8BA4;
+    font-family: "Nunito", sans-serif;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+header,nav,section
+{
+    display: block;
+}
+
+a
+{
+    text-decoration: none !important;
+}
+
+.fa
+{
+    font-weight: 900;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+/* for-them-all end */
+
+
+/* media-part start */
+@media only screen and (min-width: 1230px)
+{
+    .container
+    {
+        max-width: 1210px;
+    }
+}
+/* media-part start */
+
+
+/* details-part start */
+.ant-layout
+{
+    min-height: calc(100vh - 85px - 12rem);
+    background-color: #fff;
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+}
+
+.ant-layout, .ant-layout *
+{
+    box-sizing: border-box;
+}
+
+.ant-layout .container
+{
+    padding-top: calc(85px + 40px);
+    color: rgba(0,0,0,0.85);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.detail-img
+{
+    position: relative;
+    min-height: 12rem;
+    line-height: 0;
+    margin-bottom: .3rem;
+    width: 60%;
+}
+
+.detail-img-container
+{
+    min-height: 12rem;
+    position: relative;
+}
+
+.detail-img .ant-img
+{
+    width: 100%;
+    filter: drop-shadow(0px 12px 24px rgba(0,0,0,.2));
+    position: relative;
+    display: inline-block;
+}
+
+.detail-img .ant-img img
+{
+    cursor: zoom-in;
+    width: 100%;
+    height: auto;
+    border-style: solid;
+}
+
+.info-container
+{
+    padding-left: 4rem;
+    width: 40%;
+    margin: 0;
+    list-style: none;
+}
+
+.info-container li
+{
+    margin-bottom: 2.3rem;
+}
+
+.info-container li label
+{
+    display: block;
+    margin-bottom: 1.8rem;
+    font-size: .12rem;
+    line-height: .2rem;
+    color: rgba(0,0,0,.45);
+}
+
+.info-container li h2
+{
+    font-size: 1rem;
+    line-height: .24rem;
+    word-break: break-all;
+}
+
+.info-container .font-bold
+{
+    font-size: 1rem;
+    line-height: .22rem;
+    word-break: break-all;
+    position: relative;
+    font-weight: 700;
+}
+
+.info-container .font-bold .price
+{
+    font-size: 1.5rem;
+    line-height: 1.32rem;
+}
+
+.buy-button
+{
+    display: flex;
+    align-items: center;
+}
+
+.buy-button .buy .ant-button
+{
+    padding: 0;
+    width: 14rem;
+    height: 2.6rem;
+    border: none;
+    font-weight: 600;
+    border-radius: 1.3rem 0 1.3rem 1.3rem;
+    color: #fff;
+    margin-right: 1.2rem;
+    background: #635cdb;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+    line-height: 1.5715;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    user-select: none;
+    touch-action: manipulation;
+    font-size: 14px;
+}
+
+.buy-button .favour
+{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1.2rem;
+    position: relative;
+}
+
+.buy-button .favour a
+{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.buy-button .favour a img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.buy-button .division
+{
+    height: 1rem;
+    border-right: 1px solid rgba(0,0,0,.1);
+    display: block;
+    margin-right: 1.2rem;
+}
+
+.buy-button .jvb .ant-buttons {
+    padding: 0;
+    width: 5rem;
+    height: 2.6rem;
+    border: none;
+    font-weight: 600;
+    border-radius: 1.3rem 0 1.3rem 1.3rem;
+    color: #635cdb;
+    margin-right: 1.2rem;
+    background: #fff;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px 2px rgb(0 0 0 / 40%);
+    line-height: 1.5715;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    user-select: none;
+    touch-action: manipulation;
+    font-size: 14px;
+}
+
+.info-container p
+{
+    font-size: .85rem;
+    line-height: 1px;
+    word-break: break-all;
+    position: relative;
+}
+
+.ant-progress
+{
+    color: rgba(0,0,0,0.85);
+    width: 100%;
+    margin: 1.4rem;
+    padding-top: 1.4rem;
+}
+
+.ant-progress .text
+{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.ant-progress .lc 
+{
+    color: rgba(0,0,0,.65);
+    font-size: .12rem;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    margin-top: 2rem;
+
+}
+
+.ant-progress .lc .flex-1
+{
+    flex: 1 1 0%;
+}
+
+.ant-progress .lc .flex-right
+{
+    text-align: right;
+}
+/* details-part start */

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>创造作品</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css"> -->
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link href="../fontawesome/fontawesome-free-6.0.0-web/css/all.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/style5.css">
+</head>
+
+<body>
+	<header class="header-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="main-nav">
+
+						<!-- <a herf="../首页2.0/index.html" class="logo"> -->
+						<a href="../首页2.0/index.html" class="logo">
+							<img src="picture/logo.png" alt="">
+						</a>
+	
+						<ul class="nav">
+							<li><a href="../Market/index.html">交易市场</a></li>
+							<li><a href="../create/index2.html">作品上传</a></li>
+							<li><a href="../center/index.html">私人博物馆</a></li>
+							<li class="submenu">
+								<a href="javascript:;">中文</i></a>
+								<ul>
+									<li><a href="">中文</a></li>
+									<li><a href="">英文</a></li>
+									<!-- 做两个网页，一个中文，一个英文 -->
+								</ul>
+							</li>
+						</ul>
+                            
+						<div class="loginBtn" style="display: block;">
+							<ul class="header-buttons">
+								<li><a class="login-btn" href="javascript:;">登录/注册</a></li>
+							</ul>
+						</div>
+
+						<div class="loged" style="display: none;">
+							<ul class="header-buttons">
+								<li><a class="login-btn"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="wrapper">
+		<div class="steps-area steps-area-fixed">
+			<div class="image-holder">
+				<img src="picture/side-img.jpg" alt="">
+			</div>
+			<div class="steps clearfix">
+				<ul class="tablist multisteps-form__progress">
+					<li class="multisteps-form__progress-btn js-active current">
+						<span>1</span>
+					</li>
+					<li class="multisteps-form__progress-btn">
+						<span>2</span>
+					</li>
+					<li class="multisteps-form__progress-btn last">
+						<span>3</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<form class="multisteps-form__form" id="info" method="POST" enctype="multipart/form-data" >
+			<div class="form-area position-relative">
+				<!-- div 1 -->
+				<div class="multisteps-form__panel js-active" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no">Step 1</span>
+									<div class="step-progress float-right">
+										<span>1/3 已完成</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:33%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>请选择艺术品的类型：</h2>
+									<div class="step-box">
+										<div class="row">
+											<div class="col-md-3">
+												<label class="step-box-content bg-white text-center relative-position active">
+													<span class="step-box-icon">
+														<img src="picture/photo.svg" alt="">
+													</span>
+													<span class="step-box-text">
+														绘画
+													</span>
+													<span class="service-check-option">
+														<span><input type="radio" name="service_name" value="paintings" checked=""></span>
+													</span>
+												</label>
+											</div>
+
+											<div class="col-md-3">
+												<label class="step-box-content bg-white text-center relative-position">
+													<span class="step-box-icon">
+														<img src="picture/compose_music.svg" alt="">
+													</span>
+													<span class="step-box-text">
+														音乐
+													</span>
+													<span class="service-check-option">
+														<span><input id="condition1" type="radio" name="service_name" value="musics"></span>
+													</span>
+												</label>
+											</div>
+
+											<div class="col-md-3">
+												<label class="step-box-content bg-white text-center relative-position">
+													<span class="step-box-icon">
+														<img src="picture/video_files.svg" alt="">
+													</span>
+													<span class="step-box-text">
+														视频
+													</span>
+													<span class="service-check-option">
+														<span><input type="radio" name="service_name" value="videos"></span>
+													</span>
+												</label>
+											</div>
+
+											<div class="col-md-3">
+												<label class="step-box-content bg-white text-center relative-position">
+													<span class="step-box-icon">
+														<img src="picture/treasure.svg" alt="">
+													</span>
+													<span class="step-box-text">
+														古玩
+													</span>
+													<span class="service-check-option">
+														<span><input type="radio" name="service_name" value="treasure"></span>
+													</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /.inner -->
+						<div class="actions">
+							<ul>
+								<li class="disable" aria-disabled="true">
+									<span class="js-btn-next" title="NEXT">Backward <i class="fa fa-arrow-left"></i></span>
+								</li>
+
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT <i class="fa fa-arrow-right"></i></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- div 2 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Step 2</span>
+									<div class="step-progress float-right">
+										<span>2/3 已完成</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar"></div>
+											</div>
+										</div>
+									</div>
+
+									<h2>请填写艺术品的基本信息并上传</h2>
+									
+									<div class="form-inner-area">
+										<input type="text" name="type" class="form-control" placeholder="艺术品的类型（大类） *">
+										<input type="text" name="type-two" class="form-control" placeholder="艺术品的类型（小类） *">
+										<input type="text" name="contains" placeholder="艺术品所包含的大致内容">
+									</div>
+
+									<div class="upload-documents">
+										<h3>上传文件</h3>
+										<div class="upload-araa bg-white">
+											<input type="hidden" value="" name="fileContent" id="fileContent">
+											<input type="hidden" value="" name="filename" id="filename">
+											<div class="upload-icon float-left">
+												<i class="fas fa-cloud-upload-alt"></i>
+											</div>
+
+											<div class="upload-option text-center">
+												<label for="attach">上传文件</label>
+												<input id="attach" style="visibility:hidden;" type="file" name="showFile">
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<!-- /.inner -->
+						<div class="actions">
+							<ul>
+								<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> BACK </span></li>
+								<li><span class="js-btn-next" title="NEXT">NEXT <i class="fa fa-arrow-right"></i></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- div 3 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Step 3</span>
+									<div class="step-progress float-right">
+										<span>最后一步</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:99%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>请完成最后一步的填写：</h2>
+									<p>在这一步，需要您决定作品的名称，作者的称呼（可以匿名或者用笔名），并且决定是否上架出售，价格为多少</p>
+
+									<div class="form-inner-area">
+										<input type="text" name="nftName" class="form-control" placeholder="艺术品名字（大类） *">
+										<input type="text" name="authorname" class="form-control" placeholder="艺术品作者的名字">
+									</div>
+
+									<div class="up-selection">
+										<h3>是否要将商品上架</h3>
+										<label>
+											<input type="radio" name="nftCondition" value="1">
+											<span class="checkmark"></span>是
+										</label>
+										<label>
+											<input type="radio" name="nftCondition" value="0">
+											<span class="checkmark"></span>否
+										</label>
+									</div>
+
+									<div class="form-inner-area">
+										<input type="text" name="nftPrice" class="form-control" placeholder="作品的价格 *" style="margin-top: 5px;">
+									</div>
+
+									<div class="comment-box">
+										<p><i class="fas fa-comments" ></i> 作品信息</p>
+										<textarea name="full_comments" name="nftDeatails"></textarea>
+									</div>
+
+									<div class="comment-box">
+										<p><i class="fas fa-comments"></i> 作者信息</p>
+										<textarea name="full_comments" name="authorDeatails"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<!-- <div class="actions">
+							<ul>
+								<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> BACK </span></li>
+								<li><button  title="NEXT" onclick="jump()">SUBMIT <i class="fa fa-arrow-right"></i></button></li>
+							</ul>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="actions">
+			<ul>
+				<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> BACK </span></li>
+				<li><button  title="NEXT" onclick="jump()">SUBMIT <i class="fa fa-arrow-right"></i></button></li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script> -->
+	<script src="js/utill.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/conditionize.flexible.jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/switch.js"></script>
+	<script src="../js/IsLogin.js"></script>
+	<script>
+		// $("#files").change(function() {
+		// 	filename = this.files[0].name
+		// 	// console.log(filename);
+		// });
+
+		// function UploadFile() {
+		// 	var reader = new FileReader();
+		// 	var file = document.getElementById('attach').files[0];
+		// 	reader.onload = function() {
+		// 		document.getElementById('fileContent').value = reader.result;
+		// 		document.getElementById('filename').value = file.name;
+		// 		document.getElementById('wizard').submit();
+		// 	}
+		// 	reader.readAsDataURL(file);
+		// }
+
+		// $(document).ready(function() {
+		// 	$('.conditional').conditionize();
+		// });
+
+		// function submit_from(){
+		// 	console.log("提交");
+		// 	return false;
+		// }
+
+		function jump() {
+			//alert("fasong")
+			var formdata = new FormData($("#info")[0]);
+			//alert("huoqv")
+			console.log(formdata)
+			//while(1);
+    		$.ajax({
+    			type:"POST",
+    			dataType:"json",
+    			url:" http://localhost:8080/NFTFunction/uploading",
+    			data:formdata,
+    			async:false,
+    			cache:false,  
+    			contentType:false,
+    			processData:false,
+				"xhrFields": {
+        			withCredentials: true
+    			},
+    			headers:{
+   					"Authorization": localStorage.getItem("JWT")
+    			},
+    			success:function(msg){
+        			if(msg){
+            			alert("上传成功！");
+         				console.log(msg)
+         				console.log(msg.showFile) //取出返回json串中所需要的元素，例如showFile
+					
+         				//alert(msg.showFile)
+						
+        			}
+    			}
+			})
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+body {
+    position: relative;
+    color: #000;
+    background-color: #f5f4fe;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #635cdb;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.text-success {
+    color: #05b171 !important;
+}
+
+.text-danger {
+    color: #ea4444 !important;
+}
+
+.text-purple {
+    color: #635cdb !important;
+}
+
+.text-orange {
+    color: #fd7e14 !important;
+}
+
+.text-cyan {
+    color: #0dcaf0 !important;
+}
+
+.dropdown {
+    display: inline;
+}
+
+.avatar {
+    display: inline-block;
+    margin-bottom: 0;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.avatar>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.display-7 {
+    font-size: calc(1.325rem + .9vw);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+@media (min-width: 1200px) {
+    .display-7 {
+        font-size: 2rem;
+    }
+}
+
+/* menupart start */
+.menu {
+    z-index: 998;
+    width: 350px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-header, .menu-header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu-header {
+    padding: 0 1.5rem .5rem;
+    justify-content: space-between;
+}
+
+.menu-header-logo {
+    height: 90px;
+}
+
+.menu-header-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.menu-body .dropdown {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: .5rem;
+    padding: 15px;
+}
+
+.menu-body ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-body ul li {
+    list-style-type: none;
+}
+
+.menu-body ul li>a {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #000;
+    transition: background .2s, color .2s;
+    border-radius: 5rem;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.menu-body ul li>a.active {
+    position: relative;
+    background: rgba(99,92,219,.15);
+    color: #635cdb;
+    border-left-color: #635cdb;
+    border-right-color: #635cdb;
+}
+
+.menu-body ul li>a .nav-link-icon {
+    margin-right: 12px;
+    font-size: 22px;
+    line-height: 18px;
+    width: 35px;
+    height: 35px;
+    transition: transform .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.menu-body ul li>a.active .nav-link-icon {
+    background-color: #f5f4fe;
+    font-size: 18px;
+}
+/* menupart end */
+
+
+/* mainpart start */
+.layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 350px;
+    min-height: 100vh;
+}
+
+.header {
+    z-index: 997;
+    display: flex;
+    height: 90px;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #f5f4fe;
+    position: sticky;
+    top: 0;
+}
+
+.header .page-title {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin-right: 70px;
+}
+
+.header .search-form {
+    flex: 1;
+    margin-right: 175px;
+}
+
+.header .search-form .input-group {
+    background-color: #fff;
+    border-radius: .5rem;
+}
+
+.input-group .btn.btn-outline-light {
+    border-color: #ced4da transparent #ced4da #ced4da;
+}
+
+.header .search-form .btn {
+    border: none;
+    background: none !important;
+}
+
+.btn.btn-outline-light {
+    color: #000 !important;
+}
+
+.header .search-form .form-control {
+    border: none;
+    font-size: 16px;
+    background: none;
+}
+
+.layout-wrapper>.content {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+.card {
+    border: none;
+    transition: transform .3s;
+    border-radius: 1rem;
+}
+
+.card.widget, .card .card-footer, .card .card-header {
+    background: none;
+}
+
+.card.widget .card-header {
+    background-color: #f5f4fe;
+    border-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    height: 50px;
+}
+
+.card .card-title {
+    font-size: 1.2rem;
+}
+
+.card.widget .card-header+.card-body {
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+.btn {
+    font-size: 14px;
+    border-radius: 10rem 0 10rem 10rem;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.btn.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn.btn-icon i {
+    margin-right: 9px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+/* mainpart end */

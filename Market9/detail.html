@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>杭州景色之一</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="../fontawesome/fontawesome-free-6.0.0-web/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="css/detail.css" rel="stylesheet" type="text/css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
+        <script>
+            //localStorage.setItem("inforId",456)
+        </script>
+        <script src="../js/jquery-3.6.0.js"></script>
+        <script src="js/detail.js"></script>    
+        <script src="js/searchLogByUserIdAndNFTId.js"></script>  
+        <script src="js/verify.js"></script>
+    </head>
+
+    <body>
+        <header class="header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="main-nav">
+                            <a href="../首页2.0/index.html" class="logo">
+                                <img src="picture/logo.png" alt="">
+                            </a>
+        
+                            <ul class="nav">
+                                <li><a href="../Market/index.html">交易市场</a></li>
+                                <li><a href="../create/index2.html">作品上传</a></li>
+                                <li><a href="../center/index.html">私人博物馆</a></li>
+                                <li class="submenu">
+                                    <a href="javascript:;">中文</a>
+                                    <ul>
+                                        <li><a href="">中文</a></li>
+                                        <li><a href="">英文</a></li>
+                                        <!-- 做两个网页，一个中文，一个英文 -->
+                                    </ul>
+                                </li>
+                            </ul>
+        
+                            <a class="menu-trigger">
+                                <span>Menu</span>
+                            </a>
+                            
+                            <!-- <ul class="header-buttons">
+                                <li><a class="login-btn" href="javascript:;">登录 / 注册</a></li>
+                            </ul> -->
+                            <div class="loginBtn" style="display: block;">
+                                <ul class="header-buttons">
+                                    <li><a class="login-btn" href="javascript:;">登录/注册</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="loged" style="display: none;">
+                                <ul class="header-buttons">
+                                    <li><a class="login-btn"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="ant-layout">
+            <div class="container">
+                <div class="detail-img">
+                    <div class="detail-img-container">
+                        <div class="ant-img">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="info-container">
+                    <li>
+                        <label>作品名称</label>
+                        <h2 class="break-all"></h2>
+                    </li>
+
+                    <li>
+                        <label>创作者</label>
+                        <h2 class="break-all"></h2>
+                    </li>
+
+                    <li>
+                        <label>价格</label>
+                        <p class="font-bold">
+                            <span class="price"></span>
+                            <span>VNT</span>
+                        </p>
+                    </li>
+
+                    <li class="buy-button">
+                        <div class="buy">
+                            <button class="ant-button" onclick="buyNFT()"><span>一键购买</span></button>
+                        </div>
+
+                        <div class="favour">
+                            <a class="heart"><img src="picture/heart.png"></a>
+                        </div>
+
+                        <span class="division"></span>
+
+                        <div class="jvb">
+                            <button class="ant-buttons"><span>举报</span></button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label>NFT ID</label>
+                        <p class="nftid"></p>
+                    </li>
+
+                    <li>
+                        <label>现在拥有者</label>
+                        <p class="owner"></p>
+                    </li>
+
+                    <li>
+                        <label>作品描述</label>
+                        <p class="content-hide"></p>
+                    </li>
+
+                    <li>
+                        <label>创作者信息</label>
+                        <p class="content-hide" style="line-height: 1.22rem;"></p>
+                    </li>
+
+                    <!-- <li class="zs-part">
+                        <label>已通过鉴定机构审核</label>
+                        <div>
+                            <button class="zs-btn" ><span>查看证书</span></button>
+                            <button class="zs-btn cb" onclick="verify()"><span>检验证书</span></button>
+                        </div>
+                    </li> -->
+                </ul>
+
+                <div class="ant-progress">
+                    <div class="text">事件记录</div>
+
+                    <div class="lc">
+                        <div class="flex-1">操作</div>
+                        <div class="flex-2">操作哈希</div>
+                        <div class="flex-1">价格</div>
+                        <div class="flex-1 flex-right">日期</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="zs-box" style="display: none;">
+            <div class="zs-area">
+                <div class="pic">
+                    
+                </div>
+
+                <img src="picture/证书2.png">
+
+                <ul>
+                    <li class="zs-user"></li>
+                    <li class="zs-nftname"></li>
+                    <li class="zs-time"></li>
+                    <li class="zs-nftid"></li>
+                    <li class="zs-id"></li>
+                    <li class="zs-link"></li>
+                    <li class="zs-jg"></li>
+                </ul>
+            </div>
+
+            <div class="close-area">
+                <i class="fa fa-xmark"></i>
+            </div>
+        </div>
+
+        <div class="complain-box" style="display: none;">
+            <div class="complain-area">
+                <div class="complain-wrapper">
+                    <div class="side-img">
+                        
+                    </div>
+    
+                    <div class="side-content">
+                        <div class="side-title">请在此处写下举报的理由：</div>
+                        
+                        <form class="info-box">
+                            <textarea id="complains"></textarea>
+                        </form>
+
+                            <!-- <div class="line-buttons white-one mr-10">
+                                <span><i class="fa fa-upload"></i> 上传附件</span>
+                                <input id="attach" style="visibility: hidden; width: 0px; height: 0px" type="file">
+                            </div> -->
+        
+                        <div class="line-buttons">
+                            <span><i class="fa fa-circle-check"></i> 提交</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-btn">
+                <i class="fa fa-xmark"></i>
+            </div>
+        </div>
+
+        <footer class="ant-layout-footer footer">
+            <div class="footer-cont">
+                <div class="footer-wrapper">
+                    <div class="code-container">
+                        <div class="school-pic"></div>
+
+                        <a href="javascript:;" >
+                            <i class="fa fa-school"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+                    </div>
+
+                    <div class="bor"></div>
+
+                    <div class="links">
+                        <a href="javascript:;" >
+                            <i class="fa fa-envelope"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+
+                        <a href="javascript:;" >
+                            <i class="fa-brands fa-weibo"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+
+                        <a href="javascript:;" >
+                            <i class="fa-brands fa-twitter-square"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+
+                        <a href="javascript:;" >
+                            <i class="fa fa-paper-plane"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+                    </div>
+
+                    <div class="bor"></div>
+
+                    <a href="#" class="logo">
+                        <img src="picture/logo.png" alt="" class="logo">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+    <script>
+        // var zsBtn = document.querySelector(".zs-btn");
+        var zsArea = document.querySelector(".zs-box");
+        var zsClose = document.querySelector(".close-area");
+        // zsBtn.addEventListener("click",function(){
+        //     zsArea.style.display = "flex";
+        // });
+        zsClose.addEventListener("click",function() {
+            zsArea.style.display = "none";
+        })
+
+        var complainBtn = document.querySelector(".ant-buttons");
+        var complainArea = document.querySelector(".complain-box");
+        complainBtn.addEventListener("click",function(){
+            complainArea.style.display = "block";
+        });
+        var closeBtn = document.querySelector(".close-btn");
+        closeBtn.addEventListener("click",function(){
+            complainArea.style.display = "none";
+        })
+        var submitBtn = document.querySelector(".line-buttons");
+        submitBtn.addEventListener("click",function(){
+            var nftId = localStorage.getItem("inforId");
+            var cause = document.getElementById("complains").value;
+            alert(cause);
+
+            var settings = {
+                "url": "http://localhost:8080/userFunction/addComplaint",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    "nftId": nftId,
+                    "cause": cause
+                }),
+            };
+
+            $.ajax(settings).done(function (response) {
+            console.log(response);
+            });
+        })
+        
+        var nftId = localStorage.getItem("inforId");
+        function buyNFT(){
+            alert("购买")
+            var settings = {
+                "url": "http://localhost:8080/NFTFunction/buyNFT?nftId="+nftId,
+                "method": "GET",
+                "headers": {
+                    "Authorization": localStorage.getItem("JWT")
+                },
+                "xhrFields": {
+                    withCredentials: true
+                },
+                "timeout": 0,
+            };
+      
+            $.ajax(settings).done(function (response) {
+             console.log(response);
+            });
+        }
+    </script>
+    <script src="../js/IsLogin.js"></script>
+</html>

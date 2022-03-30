@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>管理员界面-数据统计</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="../../fontawesome/fontawesome-free-6.0.0-web/css/all.min.css">
+        <link rel="stylesheet" href="css/index.css" type="text/css">
+        <script src="js/echarts.js"></script>
+    </head>
+
+    <body>
+        <div class="menu">
+            <div class="menu-header">
+                <a href="" class="menu-header-logo">
+                    <img src="picture/nft1.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="menu-body" style="overflow: hidden; outline: none; cursor: grab; touch-action: none;">
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center">
+                        <div class="avatar me-3">
+                            <img src="picture/photo.jpg" class="rounded-circle" alt="">
+                        </div>
+
+                        <div>
+                            <div class="fw-bold">Admin</div>
+                            <small class="text-muted">Admin</small>
+                        </div>
+                    </a>
+                </div>
+
+                <ul>
+                    <li>
+                        <a class="active" href="#">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </span>
+                            <span>数据管理</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="check.html">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-check-to-slot"></i>
+                            </span>
+                            <span>作品审核</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-receipt"></i>
+                            </span>
+                            <span>举报处理</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </span>
+                            <span>交易市场</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layout-wrapper">
+            <div class="header">
+                <div class="page-title">数据统计</div>
+            </div>
+
+            <div class="content">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col-lg-7 col-md-12">
+                        <div class="card widget h-100">
+                            <div class="card-header d-flex">
+                                <h6 class="card-title">每日交易额图</h6>
+                            </div>
+    
+                            <div class="card-body" style="position: relative;">
+                                <div class="d-md-flex align-items-center mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="display-7 me-3">
+                                            <i class="fa-solid fa-bag-shopping me-2 text-purple"></i> 10.552,40
+                                        </div>
+    
+                                        <span class="text-success">
+                                            <i class="fa-solid fa-arrow-up me-1 small"></i>8.3%
+                                        </span>
+                                    </div>
+    
+                                    <div class="d-flex gap-4 align-items-center ms-auto mt-3 mt-lg-0">
+                                        <select class="form-select">
+                                            <optgroup label="2022">
+                                                <option value="March">三月</option>
+                                                <option value="April">四月</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+    
+                                <div id="sales-chart" style="min-height: 365px"></div>
+    
+                                <div class="d-flex justify-content-center gap-4 align-items-center ms-auto mt-3 mt-lg-0">
+                                    <div>
+                                        <i class="fa fa-circle mr-2 text-primary me-1 small"></i>
+                                        <span>交易额</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-5 col-md-12">
+                        <div class="card widget h-100">
+                            <div class="card-header d-flex">
+                                <h6 class="card-title">
+                                    比例
+                                </h6>
+                            </div>
+
+                            <div class="card-body" style="position: relative;">
+                                <div id="ratio-chart" style="min-height: 232.8px;"></div>
+
+                                <div class="row text-center mb-5 mt-4">
+                                    <div class="col-4">
+                                        <div class="display-7">48%</div>
+
+                                        <div class="text-success my-2 small">
+                                            <i class="fa fa-arrow-up me-1 small"></i>30.5%
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa fa-circle text-orange me-2 small"></i>
+                                            <span class="text-muted">上传nft数</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <div class="display-7">30%</div>
+
+                                        <div class="text-danger my-2 small">
+                                            <i class="fa fa-arrow-down me-1 small"></i>15.2%
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa fa-circle text-purple me-2 small"></i>
+                                            <span class="text-muted">交易nft数</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <div class="display-7">22%</div>
+
+                                        <div class="text-success my-2 small">
+                                            <i class="fa fa-arrow-up me-1 small"></i>1.80%
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa fa-circle text-cyan me-2 small"></i>
+                                            <span class="text-muted">下架nft数</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <button class="btn btn-outline-primary btn-icon">
+                                        <i class="fa fa-download"></i> 下载报告
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex mb-3">
+                                    <div class="display-7">
+                                        <i class="fa fa-basket-shopping text-purple"></i>
+                                    </div>
+                                </div>
+
+                                <h4 class="mb-3">每月新增nft数</h4>
+
+                                <div class="d-flex mb-3">
+                                    <div class="display-7">310</div>
+
+                                    <div class="ms-auto" id="total-nfts" style="width: 100px;"></div>
+                                </div>
+
+                                <div class="text-success">
+                                    比起上个月 1.4% <i class="small fa fa-arrow-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex mb-3">
+                                    <div class="display-7">
+                                        <i class="fa-regular fa-address-card text-purple"></i>
+                                    </div>
+                                </div>
+
+                                <h4 class="mb-3">每月新增用户数</h4>
+
+                                <div class="d-flex mb-3">
+                                    <div class="display-7">3759</div>
+
+                                    <div class="ms-auto" id="total-users" style="width: 100px"></div>
+                                </div>
+
+                                <div class="text-danger">
+                                    比起上个月 2.4% <i class="small fa fa-arrow-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-4">
+                                    <h6 class="card-title">近期新增用户</h6>
+
+                                    <div class="dropdown ms-auto">
+                                        <a href="#">查看全部</a>
+                                    </div>
+                                </div>
+
+                                <div class="summary-cards">
+                                    <div>
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="avatar me-3">
+                                                <img src="picture/photo.jpg" class="rounded-circle" alt="">
+                                            </div>
+
+                                            <div>
+                                                <h5 class="mb-1">Amara Keel</h5>
+
+                                                <ul class="list-inline ms-auto mb-0">
+                                                    <li class="list-inline-item mb-0">
+                                                        <i class="fa-solid fa-star text-warning"></i>
+                                                    </li>
+
+                                                    <li class="list-inline-item mb-0">
+                                                        <i class="fa-solid fa-star text-warning"></i>
+                                                    </li>
+
+                                                    <li class="list-inline-item mb-0">
+                                                        <i class="fa-solid fa-star text-warning"></i>
+                                                    </li>
+
+                                                    <li class="list-inline-item mb-0">
+                                                        <i class="fa-solid fa-star text-warning"></i>
+                                                    </li>
+
+                                                    <li class="list-inline-item mb-0">
+                                                        <i class="fa-regular fa-star text-muted"></i>
+                                                    </li>
+
+                                                    <li class="list-inline-item mb-0">(4)</li>
+                                                </ul>
+                                            </div>
+
+                                            <div>一个新用户</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var salesChart = echarts.init(document.querySelector('#sales-chart'));
+            var option = {
+                color: ['#635cdb'],
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {},
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+                },
+                yAxis: {
+                    type: 'value',
+                    min: 55,
+                    max: 80
+                },
+                series: [{
+                    type: 'line',
+                    smooth: true,
+                    data: [65, 60, 62, 69, 71, 65, 68, 67, 60, 61, 59, 64],
+                }]
+            };
+            salesChart.setOption(option);
+
+            var ratioChart = echarts.init(document.querySelector("#ratio-chart"));
+            var option = {
+                color: ['#fd7014','#0dcaf0','#635cdb'],
+                tooltip: {
+                    trigger: 'item'
+                },
+                legend: {
+                    top: '5%',
+                    left: 'center'
+                },
+                series: [
+                    {
+                        type: 'pie',
+                        radius: ['40%', '70%'],
+                        avoidLabelOverlap: false,
+                        itemStyle: {
+                            borderRadius: 10,
+                            borderColor: '#fff',
+                            borderWidth: 2
+                        },
+                        emphasis: {
+                            label: {
+                                show: true,
+                                fontSize: '40',
+                                fontWeight: 'bold'
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [{ value: 48 }, { value: 22 }, { value: 30 }]
+                    }
+                ]
+            }
+            ratioChart.setOption(option);
+
+            var totalNfts = echarts.init(document.querySelector("#total-nfts"));
+            var option = {
+                tooltip: {
+                    trigger: 'axis'
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    show:false
+                },
+                yAxis: {
+                    type: 'value',
+                    show: false,
+                    scale: true,
+                    minInterval: 50
+                },
+                series: [
+                    {
+                        type: 'line',
+                        data: [25, 60, 41, 49, 63, 30, 50],
+                        smooth: true
+                    }
+                ]
+            };
+            totalNfts.setOption(option);
+
+            var totalUsers = echarts.init(document.querySelector("#total-users"));
+            var option = {
+                tooltip: {
+                    trigger: 'axis'
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    show:false
+                },
+                yAxis: {
+                    type: 'value',
+                    show: false,
+                    scale: true,
+                    minInterval: 50
+                },
+                series: [
+                    {
+                        type: 'line',
+                        data: [25, 60, 41, 49, 63, 30, 50],
+                        smooth: true
+                    }
+                ]
+            };
+            totalUsers.setOption(option);
+        </script>
+    </body>
+</html>

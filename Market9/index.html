@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>交易市场</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="../fontawesome/fontawesome-free-6.0.0-web/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="css/index.css" rel="stylesheet" type="text/css">
+        <script src="../js/jquery-3.6.0.js"></script>
+        <script src="js/searchLogByUserIdAndNFTId.js"></script>
+        <script src="../js/nftShow.js"></script>
+       
+    </head>
+
+    <body>
+        <header class="header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="main-nav">
+                            <a href="../首页2.0/index.html" class="logo">
+                                <img src="picture/logo.png" alt="">
+                            </a>
+        
+                            <ul class="nav">
+                                <li><a href="../Market/index.html">交易市场</a></li>
+                                <li><a href="../create/index2.html">作品上传</a></li>
+                                <li><a href="../center/index.html">私人博物馆</a></li>
+                                <li class="submenu">
+                                    <a href="javascript:;">中文</a>
+                                    <ul>
+                                        <li><a href="">中文</a></li>
+                                        <li><a href="">英文</a></li>
+                                        <!-- 做两个网页，一个中文，一个英文 -->
+                                    </ul>
+                                </li>
+                            </ul>
+        
+                            <a class="menu-trigger">
+                                <span>Menu</span>
+                            </a>
+                            
+                            <!-- <ul class="header-buttons">
+                                <li><a class="login-btn" href="javascript:;">登录 / 注册</a></li>
+                            </ul> -->
+                            <div class="loginBtn" style="display: block;">
+                                <ul class="header-buttons">
+                                    <li><a class="login-btn" href="javascript:;">登录/注册</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="loged" style="display: none;">
+                                <ul class="header-buttons">
+                                    <li><a class="login-btn"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="main-banner-wrap-layout1 bg-dark-overlay bg-common minus-mgt-90" style="background-image: url(picture/banner1.jpg);">
+            <div class="container">
+                <div class="main-banner-box-layout1 animated-headline">
+                    <h1 class="ah-headline item-title">
+                        <span class="ah-words-wrapper">
+                            <b class="is-visible">选你所爱&amp;许你未来</b>
+                            <!-- <b>选你所爱&amp;许你未来</b> -->
+                        </span>
+                    </h1>
+
+                    <div class="search-box-layout1">
+                        <form name="search-form">
+                            <div class="row no-gutters">
+                                <div class="col-lg-3 form-group">
+                                    <div class="input-search-btn search-style">
+                                        <i class="fa fa-atom"></i>
+                                        <label>选择风格</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 form-group">
+                                    <div class="input-search-btn search-catagory">
+                                        <i class="fa fa-tags"></i>
+                                        <label>选择类别</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 form-group">
+                                    <div class="input-search-btn search-keyword">
+                                        <i class="fa fa-text-width"></i>
+                                        <input type="text" class="form-control" placeholder="输入关键词" name="keyword">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-2 form-group">
+                                    <button type="submit" class="submit-btn" onclick="jump()"><i class="fa fa-magnifying-glass"></i>&nbsp;搜索</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="ant-layout main" id="normal"> 
+            <div class="container">
+                <div class="nft-container">
+                    <article class="things-wrapper" style="width: 33.3333%;">
+                        <div class="things-container">
+                            <div class="picture-container" style="background-image: url(img/孔王兴/杭州景色/微信图片_20210201110950_毒霸看图.jpg);"></div>
+
+                            <div class="inf-container">
+                                <article class="words-container">
+                                    <p class="name">杭州景色之一</p>
+                                    <p class="authorName">孔王兴</p>
+                                </article>
+
+                                <div class="fov-right-box">
+                                    <div class="favour">
+                                        <a class="heart"><img src="picture/redheart.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sell-tag">
+                                <img src="picture/selling.png" style="width: 0.87rem;">
+                                <span class="sale-text">出售中</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="things-wrapper" style="width: 33.3333%;">
+                        <div class="things-container">
+                            <div class="picture-container" style="background-image: url(img/孔王兴/杭州景色/微信图片_20210326110059_毒霸看图.jpg);"></div>
+
+                            <div class="inf-container">
+                                <article class="words-container">
+                                    <p class="name">杭州景色之二</p>
+                                    <p class="authorName">孔王兴</p>
+                                </article>
+
+                                <div class="fov-right-box">
+                                    <div class="favour">
+                                        <a class="heart"><img src="picture/heart.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sell-tag">
+                                <img src="picture/selling.png" style="width: 0.87rem;">
+                                <span class="sale-text">出售中</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="things-wrapper" style="width: 33.3333%;">
+                        <div class="things-container">
+                            <div class="picture-container" style="background-image: url(img/孔王兴/杭州景色/微信图片_20210523124506_毒霸看图.jpg);"></div>
+
+                            <div class="inf-container">
+                                <article class="words-container">
+                                    <p class="name">杭州景色之三</p>
+                                    <p class="authorName">孔王兴</p>
+                                </article>
+
+                                <div class="fov-right-box">
+                                    <div class="favour">
+                                        <a class="heart"><img src="picture/heart.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sell-tag">
+                                <img src="picture/selling.png" style="width: 0.87rem;">
+                                <span class="sale-text">出售中</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="things-wrapper" style="width: 33.3333%;">
+                        <div class="things-container">
+                            <div class="picture-container" style="background-image: url(img/孔王兴/杭州景色/微信图片_20210527195414_毒霸看图.jpg);"></div>
+
+                            <div class="inf-container">
+                                <article class="words-container">
+                                    <p class="name">杭州景色之四</p>
+                                    <p class="authorName">孔王兴</p>
+                                </article>
+
+                                <div class="fov-right-box">
+                                    <div class="favour">
+                                        <a class="heart"><img src="picture/heart.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sell-tag">
+                                <img src="picture/selling.png" style="width: 0.87rem;">
+                                <span class="sale-text">出售中</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="things-wrapper" style="width: 33.3333%;">
+                        <div class="things-container">
+                            <div class="picture-container" style="background-image: url(img/孔王兴/杭州景色/微信图片_20210814115631_毒霸看图.jpg);"></div>
+
+                            <div class="inf-container">
+                                <article class="words-container">
+                                    <p class="name">杭州景色之五</p>
+                                    <p class="authorName">孔王兴</p>
+                                </article>
+
+                                <div class="fov-right-box">
+                                    <div class="favour">
+                                        <a class="heart"><img src="picture/heart.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sell-tag">
+                                <img src="picture/selling.png" style="width: 0.87rem;">
+                                <span class="sale-text">出售中</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="things-wrapper" style="width: 33.3333%;">
+                        <div class="things-container">
+                            <div class="picture-container" style="background-image: url(img/孔王兴/渡：系列/微信图片_20181126202322_毒霸看图.jpg);"></div>
+
+                            <div class="inf-container">
+                                <article class="words-container">
+                                    <p class="name">渡：系列之一</p>
+                                    <p class="authorName">孔王兴</p>
+                                </article>
+
+                                <div class="fov-right-box">
+                                    <div class="favour">
+                                        <a class="heart"><img src="picture/heart.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sell-tag">
+                                <img src="picture/selling.png" style="width: 0.87rem;">
+                                <span class="sale-text">出售中</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="things-wrapper" style="width: 33.3333%;">
+                        <div class="things-container">
+                            <div class="picture-container" style="background-image: url(img/孔王兴/渡：系列/微信图片_20200826214452_毒霸看图.jpg);"></div>
+
+                            <div class="inf-container">
+                                <article class="words-container">
+                                    <p class="name">渡：系列之七</p>
+                                    <p class="authorName">孔王兴</p>
+                                </article>
+
+                                <div class="fov-right-box">
+                                    <div class="favour">
+                                        <a class="heart"><img src="picture/heart.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sell-tag">
+                                <img src="picture/selling.png" style="width: 0.87rem;">
+                                <span class="sale-text">出售中</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="things-wrapper" style="width: 33.3333%;">
+                        <div class="things-container">
+                            <div class="picture-container" style="background-image: url(img/孔王兴/渡：系列/微信图片_20200826214939_毒霸看图.jpg);"></div>
+
+                            <div class="inf-container">
+                                <article class="words-container">
+                                    <p class="name">渡：系列之八</p>
+                                    <p class="authorName">孔王兴</p>
+                                </article>
+
+                                <div class="fov-right-box">
+                                    <div class="favour">
+                                        <a class="heart"><img src="picture/heart.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sell-tag">
+                                <img src="picture/selling.png" style="width: 0.87rem;">
+                                <span class="sale-text">出售中</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="things-wrapper" style="width: 33.3333%;">
+                        <div class="things-container">
+                            <div class="picture-container" style="background-image: url(img/孔王兴/渡：系列/微信图片_20200826215020_毒霸看图.jpg);"></div>
+
+                            <div class="inf-container">
+                                <article class="words-container">
+                                    <p class="name">渡：系列之九</p>
+                                    <p class="authorName">孔王兴</p>
+                                </article>
+
+                                <div class="fov-right-box">
+                                    <div class="favour">
+                                        <a class="heart"><img src="picture/heart.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sell-tag">
+                                <img src="picture/selling.png" style="width: 0.87rem;">
+                                <span class="sale-text">出售中</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="things-wrapper" style="width: 33.3333%;">
+                        <div class="things-container">
+                            <div class="picture-container" style="background-image: url(img/孔王兴/渡：系列/微信图片_20200826215114_毒霸看图.jpg);"></div>
+
+                            <div class="inf-container">
+                                <article class="words-container">
+                                    <p class="name">渡：系列之十</p>
+                                    <p class="authorName">孔王兴</p>
+                                </article>
+
+                                <div class="fov-right-box">
+                                    <div class="favour">
+                                        <a class="heart"><img src="picture/heart.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sell-tag">
+                                <img src="picture/selling.png" style="width: 0.87rem;">
+                                <span class="sale-text">出售中</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="things-wrapper" style="width: 33.3333%;">
+                        <div class="things-container">
+                            <div class="picture-container">
+                                <img src="img/沈鸿达/《将进酒》李白.png">
+                            </div>
+
+                            <div class="inf-container">
+                                <article class="words-container">
+                                    <p class="name">渡：系列之十一</p>
+                                    <p class="authorName">孔王兴</p>
+                                </article>
+
+                                <div class="fov-right-box">
+                                    <div class="favour">
+                                        <a class="heart"><img src="picture/heart.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sell-tag">
+                                <img src="picture/selling.png" style="width: 0.87rem;">
+                                <span class="sale-text">出售中</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="things-wrapper" style="width: 33.3333%;">
+                        <div class="things-container">
+                            <div class="picture-container">
+                                <p><img src="img/孔王兴/杭州景色/微信图片_20210201110950_毒霸看图.jpg"></p>
+                                
+                            </div>
+
+                            <div class="inf-container">
+                                <article class="words-container">
+                                    <p class="name">渡：系列之十二</p>
+                                    <p class="authorName">孔王兴</p>
+                                </article>
+
+                                <div class="fov-right-box">
+                                    <div class="favour">
+                                        <a class="heart"><img src="picture/heart.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sell-tag">
+                                <img src="picture/selling.png" style="width: 0.87rem;">
+                                <span class="sale-text">出售中</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="pages-wrapper">
+                        <div class="pages-container">
+                            <span>
+                                <div class="index">1</div>
+                                <div class="index">2</div>
+                                <div class="index">3</div>
+                                <div class="index">4</div>
+                                <div class="index">5</div>
+                            </span>
+                            <svg viewBox="0 0 100 100">
+                                <path d="m 7.1428558,49.999998 c -1e-7,-23.669348 19.1877962,-42.8571447 42.8571442,-42.8571446 23.669347,0 42.857144,19.1877966 42.857144,42.8571446" />
+                            </svg>
+                            <svg viewBox="0 0 100 100">
+                                <path d="m 7.1428558,49.999998 c -1e-7,23.669347 19.1877962,42.857144 42.8571442,42.857144 23.669347,0 42.857144,-19.187797 42.857144,-42.857144" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>  -->
+
+        <section class="ant-layout main" id="search"> 
+            <div class="container">
+                <div class="nft-container" id="show">
+
+  
+                </div>
+                <div class="pages-wrapper">
+                    <div class="pages-container">
+                        <span>
+                            <div class="index">1</div>
+                            <div class="index">2</div>
+                            <div class="index">3</div>
+                            <div class="index">4</div>
+                            <div class="index">5</div>
+                        </span>
+                        <svg viewBox="0 0 100 100">
+                            <path d="m 7.1428558,49.999998 c -1e-7,-23.669348 19.1877962,-42.8571447 42.8571442,-42.8571446 23.669347,0 42.857144,19.1877966 42.857144,42.8571446" />
+                        </svg>
+                        <svg viewBox="0 0 100 100">
+                            <path d="m 7.1428558,49.999998 c -1e-7,23.669347 19.1877962,42.857144 42.8571442,42.857144 23.669347,0 42.857144,-19.187797 42.857144,-42.857144" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="ant-layout-footer footer">
+            <div class="footer-cont">
+                <div class="footer-wrapper">
+                    <div class="code-container">
+                        <div class="school-pic"></div>
+
+                        <a href="javascript:;" >
+                            <i class="fa fa-school"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+                    </div>
+
+                    <div class="bor"></div>
+
+                    <div class="links">
+                        <a href="javascript:;" >
+                            <i class="fa fa-envelope"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+
+                        <a href="javascript:;" >
+                            <i class="fa-brands fa-weibo"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+
+                        <a href="javascript:;" >
+                            <i class="fa-brands fa-twitter-square"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+
+                        <a href="javascript:;" >
+                            <i class="fa fa-paper-plane"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+                    </div>
+
+                    <div class="bor"></div>
+
+                    <a href="#" class="logo">
+                        <img src="picture/logo.png" alt="" class="logo">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+    <script>
+        // var containers = document.querySelectorAll("article");
+        // for (var i=0; i<containers.length; i++) {
+        //     containers[i].addEventListener("click",function(){
+        //         window.location.href = 'detail.html?nftId=' + nftId;
+        //     })
+        // }
+
+
+        function jump(){
+            var keyword = document.forms["search-form"]["keyword"].value;
+            alert(keyword);
+            var settings = {
+                "url": "http://localhost:8080/NFTFunction//searchNFTByUserId",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    "userId": keyword
+                }),
+            };
+            $.ajax(settings).done(function(response){
+                console.log(response);
+                document.getElementById("show").innerHTML = JSON.stringify(response);
+                alert(getJsonLength(response))
+            });
+        }
+        function getJsonLength(jsonData){
+            var jsonLength = 0;
+            for(var item in jsonData){
+                jsonLength++;
+            }
+            return jsonLength;
+        }
+
+        const c = document.querySelector('.pages-container')
+        const indexs = Array.from(document.querySelectorAll('.index'))
+        let cur = -1
+        indexs.forEach((index, i) => {
+            index.addEventListener('click', (e) => {
+                // clear
+                c.className = 'pages-container'
+                void c.offsetWidth; // Reflow
+                c.classList.add('open')
+                c.classList.add(`i${i + 1}`)
+                if (cur > i) {
+                    c.classList.add('flip')
+                }
+                cur = i
+            })
+        })
+    </script>
+     <script src="../js/IsLogin.js"></script>
+</html>

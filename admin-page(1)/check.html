@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>管理员界面-作品审核</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="../../fontawesome/fontawesome-free-6.0.0-web/css/all.min.css">
+        <link rel="stylesheet" href="css/check.css" type="text/css">
+        <script src="../js/jquery-3.6.0.js"></script>
+        <script src="js/check.js"></script>
+    </head>
+
+    <body>
+        <div class="menu">
+            <div class="menu-header">
+                <a href="" class="menu-header-logo">
+                    <img src="picture/nft1.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="menu-body" style="overflow: hidden; outline: none; cursor: grab; touch-action: none;">
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center">
+                        <div class="avatar me-3">
+                            <img src="picture/photo.jpg" class="rounded-circle" alt="">
+                        </div>
+
+                        <div>
+                            <div class="fw-bold">Admin</div>
+                            <small class="text-muted">Admin</small>
+                        </div>
+                    </a>
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </span>
+                            <span>数据管理</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="active" href="#">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-check-to-slot"></i>
+                            </span>
+                            <span>作品审核</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="handle.html">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-receipt"></i>
+                            </span>
+                            <span>举报处理</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span class="nav-link-icon">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </span>
+                            <span>交易市场</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layout-wrapper">
+            <div class="header">
+                <div class="page-title">作品审核</div>
+            </div>
+
+            <div class="content">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-md-flex gap-4 align-items-center">
+                            <div class="d-none d-md-flex">所有待审核作品</div>
+                            <div class="d-md-flex gap-4 align-items-center">
+                                <form class="mb-3 mb-md-0">
+                                    <div class="row g-4">
+                                        <div class="col-md-3">
+                                            <select class="form-select">
+                                                <option value="asc">升序</option>
+                                                <option value="desc">降序</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <select class="form-select">
+                                                <option value="nftname">作品名称</option>
+                                                <option value="username">上传者</option>
+                                                <option value="date">上传日期</option>
+                                                <option value="price">价格</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="搜索">
+
+                                                <button class="btn btn-outline-light" type="button">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="dropdown ms-auto">
+                                <a href="#" class="btn btn-primary dropdown-toggle">操作</a>
+
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="#" class="dropdown-item">删除选中项</a>
+                                    <a href="#" class="dropdown-item">通过选中项</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive" style="overflow: hidden; outline: none;">
+                    <table class="table table-custom table-lg mb-0" id="checks">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input class="form-check-input select-all" type="checkbox" id="defaultCheck1">
+                                </th>
+                                <th>作品名称</th>
+                                <th>上传者</th>
+                                <th>上传日期</th>
+                                <th>价格</th>
+                                <th class="text-end">操作</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="main-part">
+                            <tr>
+                                <td>
+                                    <input class="form-check-input" type="checkbox">
+                                </td>
+                                <td>
+                                    <a class="nftname" href="#">XXXX</a>
+                                </td>
+                                <td>Cortie Gemson</td>
+                                <td>2022.3.14</td>
+                                <td>10(VNT)</td>
+                                <td class="text-end">
+                                    <div class="d-flex">
+                                        <div class="dropdown ms-auto">
+                                            <button class="btn btn-blue" onclick="pass()">通过</button>
+                                            <button class="btn btn-purple" onclick="refuse()">删除</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <nav class="mt-4">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#">
+                                <span>&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">
+                                <span>&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="complain-box" style="display: none;">
+            <div class="complain-area">
+                <div class="complain-wrapper">
+                    <div class="side-img">
+                        
+                    </div>
+    
+                    <div class="side-content">
+                        <!-- <ul>
+                            <li>作品名称:</li>
+                            <li>创作者名称：</li>
+                            <li>
+                                <span>作品类别:</span>
+                                <div class="btn btn-circle">图画</div>
+                            </li>
+                            <li>作品价格:</li>
+                            <li>作品信息:</li>
+                            <li>创作者信息:</li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-btn">
+                <i class="fa fa-xmark"></i>
+            </div>
+        </div>
+
+        <script>
+            var actbtn = document.querySelector(".dropdown-toggle");
+            var menuArea = document.querySelectorAll(".dropdown-menu-end");
+            var menubtn = document.querySelectorAll(".btn-floating");
+            actbtn.addEventListener("click",function(){
+                actbtn.classList.add("show");
+                menuArea[0].classList.add("show");
+            })
+            console.log(menuArea);
+            console.log(menubtn);
+            for(var i=0; i<menubtn.length; i++) {
+                menubtn[i].addEventListener("click",function() {
+                    menubtn[i].classList.add("show");
+                    menuArea[i+1].classList.add("show");
+                })
+            }
+
+            var a = document.querySelector(".nftname");
+            var complainBox = document.querySelector(".complain-box");
+            a.addEventListener("click",function(){
+              complainBox.style.display = "block";
+            })
+            var closeBtn = document.querySelector(".close-btn");
+            closeBtn.addEventListener("click",function(){
+                complainBox.style.display = "none";
+            })
+        </script>
+    </body>
+</html>
