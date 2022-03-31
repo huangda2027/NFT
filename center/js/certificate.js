@@ -1,8 +1,7 @@
-function addIssue() {
-  var nftId = localStorage.getItem("itemId");
-  var reasons = document.querySelector(".reasons");
+var nftId = localStorage.getItem("itemId");
+var reasons = document.querySelector(".reasons");
 
-  var settings = {
+var settings = {
     "url": "http://localhost:8080/NFTFunction/addIssue",
     "method": "POST",
     "timeout": 0,
@@ -11,11 +10,10 @@ function addIssue() {
     },
     "data": JSON.stringify({
       "nftId": nftId,
-      "prove": reasons
+      "prove": prove
     }),
   };
-
+  
   $.ajax(settings).done(function (response) {
     console.log(response);
   });
-}

@@ -1,355 +1,356 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>个人中心</title>
 
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="css/index.css" rel="stylesheet" type="text/css">
-        <link href="../fontawesome/fontawesome-free-6.0.0-web/css/all.min.css" rel="stylesheet" type="text/css">
-        <script src="../js/jquery-3.6.0.js"></script>
-        <script src="../js/center_Show4.js"></script>
-        <script src="js/certificate.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人中心</title>
 
-    <body>
-        <header class="header-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="main-nav">
-                            <a herf="" class="logo">
-                                <img src="picture/logo.png" alt="">
-                            </a>
-        
-                            <ul class="nav">
-                                <li><a href="../../Marketplace/Market/index.html">交易市场</a></li>
-                                <li><a href="">作品上传</a></li>
-                                <li><a href="">私人博物馆</a></li>
-                                <li class="submenu">
-                                    <a href="javascript:;">中文</i></a>
-                                    <ul>
-                                        <li><a href="">中文</a></li>
-                                        <li><a href="">英文</a></li>
-                                        <!-- 做两个网页，一个中文，一个英文 -->
-                                    </ul>
-                                </li>
-                            </ul>
-        
-                            <a class="menu-trigger">
-                                <span>Menu</span>
-                            </a>
-        
-                            <ul class="header-buttons">
-                                <li><a class="message-btn" href="javascript:;"><i class="fa fa-bell"></i></a></li>
-                                <li><a class="login-btn" href="javascript:;">登录/注册</a></li>
-                            </ul>
-                        </div>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="../fontawesome/fontawesome-free-6.0.0-web/css/all.min.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/center_Show4.js"></script>
+    <script src="js/certificate.js"></script>
+</head>
+
+<body>
+    <header class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="main-nav">
+                        <a herf="" class="logo">
+                            <img src="picture/logo.png" alt="">
+                        </a>
+
+                        <ul class="nav">
+                            <li><a href="../../Marketplace/Market/index.html">交易市场</a></li>
+                            <li><a href="">作品上传</a></li>
+                            <li><a href="">私人博物馆</a></li>
+                            <li class="submenu">
+                                <a href="javascript:;">中文</i></a>
+                                <ul>
+                                    <li><a href="">中文</a></li>
+                                    <li><a href="">英文</a></li>
+                                    <!-- 做两个网页，一个中文，一个英文 -->
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <a class="menu-trigger">
+                            <span>Menu</span>
+                        </a>
+
+                        <ul class="header-buttons">
+                            <li><a class="message-btn" href="javascript:;"><i class="fa fa-bell"></i></a></li>
+                            <li><a class="login-btn" href="javascript:;">登录/注册</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <div class="sidebar" id="notifications">
-            <div class="sidebar-header d-block align-items-end">
-                <div class="align-items-center d-flex justify-content-between py-4">
-                    消息
-                    <button class="close-btn">
-                        <i class="fa fa-arrow-right"></i>
-                    </button>
-                </div>
-
-                <ul class="nav nav-pills">
-                    <li class="nav-items">
-                        <a class="nav-container active" href="#activities" id="act-btn">购买提醒</a>
-                    </li>
-
-                    <li class="nav-items">
-                        <a class="nav-container" href="#notes" id="note-btn">审核消息</a>
-                    </li>
-
-                    <li class="nav-items">
-                        <a class="nav-container" href="#alerts" id="alert-btn">举报提醒</a>
-                    </li>
-                </ul>
+    <div class="sidebar" id="notifications">
+        <div class="sidebar-header d-block align-items-end">
+            <div class="align-items-center d-flex justify-content-between py-4">
+                消息
+                <button class="close-btn">
+                    <i class="fa fa-arrow-right"></i>
+                </button>
             </div>
 
-            <div class="sidebar-content">
-                <div class="tab-content">
-                    <div class="tab-pane active" id="activities">
-                        <div class="tab-pane-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="px-0 list-group-item">
-                                    <a href="#" class="d-flex">
-                                        <div class="flex-shrink-0">
-                                            <figure class="avatar avatar-info me-3">
-                                                <span class="avatar-text rounded-circle">
-                                                    <i class="fa fa-user"></i>
-                                                </span>
-                                            </figure>
-                                        </div>
+            <ul class="nav nav-pills">
+                <li class="nav-items">
+                    <a class="nav-container active" href="#activities" id="act-btn">购买提醒</a>
+                </li>
 
-                                        <div class="flex-grow-1">
-                                            <p class="mb-0 fw-bold d-flex justify-content-between">
-                                                您的《XXX》已被购买
-                                            </p>
-                                            <span class="text-muted small">
-                                                <i class="fa fa-clock"></i> 今天
-                                            </span>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                <li class="nav-items">
+                    <a class="nav-container" href="#notes" id="note-btn">审核消息</a>
+                </li>
 
-                        <div class="tab-pane-footer">
-                            <a href="#" class="btn btn-success">
-                                <i class="fa fa-check me-2"></i> 全部已读
-                            </a>
+                <li class="nav-items">
+                    <a class="nav-container" href="#alerts" id="alert-btn">举报提醒</a>
+                </li>
+            </ul>
+        </div>
 
-                            <a href="#" class="btn btn-danger ms-2">
-                                <i class="fa fa-trash-can me-2"></i> 删除全部
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane" id="notes">
-                        <div class="tab-pane-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="px-0 list-group-item">
-                                    <p class="mb-0 fw-bold text-success d-flex justify-content-between">
-                                        您的《XXX》已通过审核
-                                    </p>
-
-                                    <span class="text-muted small">
-                                        <i class="fa fa-clock me-1"></i> 今天
-                                    </span>
-
-                                    <div class="mt-2">
-                                        <a href="#">重新编辑</a>
-
-                                        <a href="#" class="text-danger ms-2">删除</a>
-                                    </div>
-                                </li>
-
-                                <li class="px-0 list-group-item">
-                                    <p class="mb-0 d-flex justify-content-between">
-                                        您的《XXX》未通过审核
-                                    </p>
-
-                                    <span class="text-muted small">
-                                        <i class="fa fa-clock me-1"></i> 今天
-                                    </span>
-
-                                    <div class="mt-2">
-                                        <a href="#">重新编辑</a>
-
-                                        <a href="#" class="text-danger ms-2">删除</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="tab-pane-footer">
-                            <a href="#" class="btn btn-primary btn-block">
-                                <i class="fa fa-trash-can me-2"></i> 删除全部未通过审核
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane" id="alerts">
-                        <div class="tab-pane-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="px-0 list-group-item d-flex">
+        <div class="sidebar-content">
+            <div class="tab-content">
+                <div class="tab-pane active" id="activities">
+                    <div class="tab-pane-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="px-0 list-group-item">
+                                <a href="#" class="d-flex">
                                     <div class="flex-shrink-0">
-                                        <figure class="avatar avatar-warning me-3">
+                                        <figure class="avatar avatar-info me-3">
                                             <span class="avatar-text rounded-circle">
-                                                <i class="fa-regular fa-bell"></i>
+                                                <i class="fa fa-user"></i>
                                             </span>
                                         </figure>
                                     </div>
 
                                     <div class="flex-grow-1">
                                         <p class="mb-0 fw-bold d-flex justify-content-between">
-                                            您对《XXX》的举报正在处理中
+                                            您的《XXX》已被购买
                                         </p>
-
                                         <span class="text-muted small">
                                             <i class="fa fa-clock"></i> 今天
                                         </span>
                                     </div>
-                                </li>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-                                <li class="px-0 list-group-item d-flex">
-                                    <div class="flex-shrink-0">
-                                        <figure class="avatar avatar-warning me-3">
-                                            <span class="avatar-text rounded-circle">
-                                                <i class="fa fa-lock"></i>
-                                            </span>
-                                        </figure>
-                                    </div>
+                    <div class="tab-pane-footer">
+                        <a href="#" class="btn btn-success">
+                            <i class="fa fa-check me-2"></i> 全部已读
+                        </a>
 
-                                    <div class="flex-grow-1">
-                                        <p class="mb-0 fw-bold d-flex justify-content-between text-danger">
-                                            对您的《XXX》的举报已被管理员核实，作品已强制下架
-                                        </p>
+                        <a href="#" class="btn btn-danger ms-2">
+                            <i class="fa fa-trash-can me-2"></i> 删除全部
+                        </a>
+                    </div>
+                </div>
 
-                                        <span class="text-muted small">
-                                            <i class="fa fa-clock"></i> 今天
+                <div class="tab-pane" id="notes">
+                    <div class="tab-pane-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="px-0 list-group-item">
+                                <p class="mb-0 fw-bold text-success d-flex justify-content-between">
+                                    您的《XXX》已通过审核
+                                </p>
+
+                                <span class="text-muted small">
+                                    <i class="fa fa-clock me-1"></i> 今天
+                                </span>
+
+                                <div class="mt-2">
+                                    <a href="#">重新编辑</a>
+
+                                    <a href="#" class="text-danger ms-2">删除</a>
+                                </div>
+                            </li>
+
+                            <li class="px-0 list-group-item">
+                                <p class="mb-0 d-flex justify-content-between">
+                                    您的《XXX》未通过审核
+                                </p>
+
+                                <span class="text-muted small">
+                                    <i class="fa fa-clock me-1"></i> 今天
+                                </span>
+
+                                <div class="mt-2">
+                                    <a href="#">重新编辑</a>
+
+                                    <a href="#" class="text-danger ms-2">删除</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane-footer">
+                        <a href="#" class="btn btn-primary btn-block">
+                            <i class="fa fa-trash-can me-2"></i> 删除全部未通过审核
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="alerts">
+                    <div class="tab-pane-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="px-0 list-group-item d-flex">
+                                <div class="flex-shrink-0">
+                                    <figure class="avatar avatar-warning me-3">
+                                        <span class="avatar-text rounded-circle">
+                                            <i class="fa-regular fa-bell"></i>
                                         </span>
-                                    </div>
-                                </li>
+                                    </figure>
+                                </div>
 
-                                <li class="px-0 list-group-item d-flex">
-                                    <div class="flex-shrink-0">
-                                        <figure class="avatar avatar-warning me-3">
-                                            <span class="avatar-text rounded-circle">
-                                                <i class="fa fa-lock-open"></i>
-                                            </span>
-                                        </figure>
-                                    </div>
+                                <div class="flex-grow-1">
+                                    <p class="mb-0 fw-bold d-flex justify-content-between">
+                                        您对《XXX》的举报正在处理中
+                                    </p>
 
-                                    <div class="flex-grow-1">
-                                        <p class="mb-0 fw-bold d-flex justify-content-between text-success">
-                                            对您的《XXX》的举报已被管理员驳回，作品可以正常交易
-                                        </p>
+                                    <span class="text-muted small">
+                                        <i class="fa fa-clock"></i> 今天
+                                    </span>
+                                </div>
+                            </li>
 
-                                        <span class="text-muted small">
-                                            <i class="fa fa-clock"></i> 今天
+                            <li class="px-0 list-group-item d-flex">
+                                <div class="flex-shrink-0">
+                                    <figure class="avatar avatar-warning me-3">
+                                        <span class="avatar-text rounded-circle">
+                                            <i class="fa fa-lock"></i>
                                         </span>
-                                    </div>
-                                </li>
+                                    </figure>
+                                </div>
 
-                                <li class="px-0 list-group-item d-flex">
-                                    <div class="flex-shrink-0">
-                                        <figure class="avatar avatar-warning me-3">
-                                            <span class="avatar-text rounded-circle">
-                                                <i class="fa fa-exclamation"></i>
-                                            </span>
-                                        </figure>
-                                    </div>
+                                <div class="flex-grow-1">
+                                    <p class="mb-0 fw-bold d-flex justify-content-between text-danger">
+                                        对您的《XXX》的举报已被管理员核实，作品已强制下架
+                                    </p>
 
-                                    <div class="flex-grow-1">
-                                        <p class="mb-0 fw-bold d-flex justify-content-between text-zs">
-                                            您的《XXX》被用户举报，请尽快处理
-                                        </p>
+                                    <span class="text-muted small">
+                                        <i class="fa fa-clock"></i> 今天
+                                    </span>
+                                </div>
+                            </li>
 
-                                        <span class="text-muted small">
-                                            <i class="fa fa-clock"></i> 今天
+                            <li class="px-0 list-group-item d-flex">
+                                <div class="flex-shrink-0">
+                                    <figure class="avatar avatar-warning me-3">
+                                        <span class="avatar-text rounded-circle">
+                                            <i class="fa fa-lock-open"></i>
                                         </span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                                    </figure>
+                                </div>
 
-                        <div class="tab-pane-footer">
-                            <a href="#" class="btn btn-success">
-                                <i class="fa fa-check"></i> 全部已读
-                            </a>
+                                <div class="flex-grow-1">
+                                    <p class="mb-0 fw-bold d-flex justify-content-between text-success">
+                                        对您的《XXX》的举报已被管理员驳回，作品可以正常交易
+                                    </p>
 
-                            <a href="#" class="btn btn-danger ms-2">
-                                <i class="fa fa-trash-can"></i> 删除全部
-                            </a>
-                        </div>
+                                    <span class="text-muted small">
+                                        <i class="fa fa-clock"></i> 今天
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="px-0 list-group-item d-flex">
+                                <div class="flex-shrink-0">
+                                    <figure class="avatar avatar-warning me-3">
+                                        <span class="avatar-text rounded-circle">
+                                            <i class="fa fa-exclamation"></i>
+                                        </span>
+                                    </figure>
+                                </div>
+
+                                <div class="flex-grow-1">
+                                    <p class="mb-0 fw-bold d-flex justify-content-between text-zs">
+                                        您的《XXX》被用户举报，请尽快处理
+                                    </p>
+
+                                    <span class="text-muted small">
+                                        <i class="fa fa-clock"></i> 今天
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane-footer">
+                        <a href="#" class="btn btn-success">
+                            <i class="fa fa-check"></i> 全部已读
+                        </a>
+
+                        <a href="#" class="btn btn-danger ms-2">
+                            <i class="fa fa-trash-can"></i> 删除全部
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="nav-area d-flex flex-column justify-content-center">
-            <nav class="navbar nav-menu">
-                <ul>
-                    <li class="nav-link">
-                        <a class="nav-link scrollto active">
-                            <i class="fa fa-home"></i> <span>我的主页</span>
-                        </a>
-                    </li>
+    <div class="nav-area d-flex flex-column justify-content-center">
+        <nav class="navbar nav-menu">
+            <ul>
+                <li class="nav-link">
+                    <a class="nav-link scrollto active">
+                        <i class="fa fa-home"></i> <span>我的主页</span>
+                    </a>
+                </li>
 
-                    <li class="nav-link">
-                        <a class="nav-link scrollto">
-                            <i class="fa fa-user"></i> <span>个人信息</span>
-                        </a>
-                    </li>
-                
-                    <li class="nav-link">
-                        <a class="nav-link scrollto">
-                            <i class="fa fa-heart"></i> <span>我的喜欢</span>
-                        </a>
-                    </li>
-                
-                    <li class="nav-link">
-                        <a class="nav-link scrollto">
-                            <i class="fa fa-atom"></i> <span>私人博物馆</span>
-                        </a>
-                    </li>
-                
-                    <li class="nav-link">
-                        <a class="nav-link scrollto">
-                            <i class="fa fa-wallet"></i> <span>我的钱包</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+                <li class="nav-link">
+                    <a class="nav-link scrollto">
+                        <i class="fa fa-user"></i> <span>个人信息</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a class="nav-link scrollto">
+                        <i class="fa fa-heart"></i> <span>我的喜欢</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a class="nav-link scrollto">
+                        <i class="fa fa-atom"></i> <span>私人博物馆</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a class="nav-link scrollto">
+                        <i class="fa fa-wallet"></i> <span>我的钱包</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="home-area">
+        <div class="container">
+            <h1>DDBS</h1>
+            <p>欢迎回来！</p>
+            <div class="social-links">
+                <a href="#" class="weixin"><i class="fa-brands fa-weixin"></i></a>
+                <a href="#" class="weibo"><i class="fa-brands fa-weibo"></i></a>
+                <a href="#" class="qq"><i class="fa-brands fa-qq"></i></a>
+                <a href="#" class="mobile-button"><i class="fa fa-mobile-button"></i></a>
+            </div>
         </div>
+    </section>>
 
-        <section class="home-area">
-            <div class="container">
-                <h1>DDBS</h1>
-                <p>欢迎回来！</p>
-                <div class="social-links">
-                    <a href="#" class="weixin"><i class="fa-brands fa-weixin"></i></a>
-                    <a href="#" class="weibo"><i class="fa-brands fa-weibo"></i></a>
-                    <a href="#" class="qq"><i class="fa-brands fa-qq"></i></a>
-                    <a href="#" class="mobile-button"><i class="fa fa-mobile-button"></i></a>
+    <section class="user-area">
+        <div class="container">
+            <h3 class="section-title">基本信息</h3>
+
+            <div class="flex">
+                <div class="flex-col">
+                    <label class="text-right">账户昵称</label>
+                    <label class="text-right">账号ID</label>
+                    <label class="text-right">手机号</label>
                 </div>
-            </div>
-        </section>>
 
-        <section class="user-area">
-            <div class="container">
-                <h3 class="section-title">基本信息</h3>
+                <div>
+                    <div class="text-changable">
+                        <p class="mr-5">DDBS</p>
 
-                <div class="flex">
-                    <div class="flex-col">
-                        <label class="text-right">账户昵称</label>
-                        <label class="text-right">账号ID</label>
-                        <label class="text-right">手机号</label>
+                        <i class="fa fa-pen-to-square"></i>
                     </div>
 
-                    <div>
-                        <div class="text-changable">
-                            <p class="mr-5">DDBS</p>
+                    <div class="text-changable">
+                        <p class="mr-5">1518160186</p>
+                    </div>
 
-                            <i class="fa fa-pen-to-square"></i>
-                        </div>
+                    <div class="text-changable">
+                        <p class="mr-5">+86 | 19858874247</p>
 
-                        <div class="text-changable">
-                            <p class="mr-5">1518160186</p>
-                        </div>
-
-                        <div class="text-changable">
-                            <p class="mr-5">+86 | 19858874247</p>
-
-                            <i class="fa fa-pen-to-square"></i> 
-                        </div>
+                        <i class="fa fa-pen-to-square"></i>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="likes-area">
-            <div class="container">
-                <h3 class="section-title">我的喜欢</h3>
+    <section class="likes-area">
+        <div class="container">
+            <h3 class="section-title">我的喜欢</h3>
 
-                <div class="nft-container">
-                    
-                </div>
+            <div class="nft-container">
+
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- <section class="personal-area">
+    <!-- <section class="personal-area">
             <div class="container">                                                            
                 <div class="text-container">
                     <div class="left-part">
@@ -421,251 +422,273 @@
             </div>
         </section> -->
 
-        <section class="personal-area">
-            <div class="container">                                                            
-                <div class="text-container">
-                    <div class="left-part">
-                        <div class="words-l selected all-area">全部</div>
-                        <div class="words-l all-area">出售中</div>
-                        <div class="words-l all-area">未出售</div>
-                    </div>
-
-                    <div class="right-part all-area">
-                        <span>审核中</span>
-                    </div>
+    <section class="personal-area">
+        <div class="container">
+            <div class="text-container">
+                <div class="left-part">
+                    <div class="words-l selected all-area">全部</div>
+                    <div class="words-l all-area">出售中</div>
+                    <div class="words-l all-area">未出售</div>
                 </div>
 
-                <div class="allpart" style="display: block;">
-                    <div class="container">
-                        <div class="nft-container">
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div class="allpart" style="display: none;">
-                    <div class="container">
-                        <div class="nft-container">
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div class="allpart" style="display: none;">
-                    <div class="container">
-                        <div class="nft-container">
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div class="allpart" style="display: none;">
-                    <div class="container">
-                        <div class="nft-container">
-                            
-                        </div>
-                    </div>
+                <div class="right-part all-area">
+                    <span>审核中</span>
                 </div>
             </div>
-        </section>
 
-        <div class="handle-wrapper" style="display: none;">
-            <div class="handle-card">
-                <input type="radio" name="select" id="slide_1" checked>
-                <input type="radio" name="select" id="slide_2">
-                <input type="checkbox" id="sideImg">
-    
-                <div class="slider">
-                    <label for="slide_1" class="slide slide_1"></label>
-                    <label for="slide_2" class="slide slide_2"></label>
-                </div>
-    
-                <div class="inner_part">
-                    <label for="slideImg" class="img">
-                        <img class="img_1" src="picture/photo.jpg">
-                    </label>
-    
-                    <div class="content content_1">
-                        <div class="title">作品详情</div>
-                        <div class="text">
-                            <ul>
-                                <li>NFTId:</li>
-                                <li>上传者名字:</li>
-                                <li>上传时间:</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="inner_part">
-                    <label for="slideImg" class="img">
-                        <img class="img_2" src="picture/photo.jpg">
-                    </label>
-    
-                    <div class="content content_2">
-                        <div class="title">申请证书</div>
-                        <div class="text">
-                            <ul>
-                                <li>申请原因:</li>
-                                <textarea class="reasons"></textarea>
-                                <button class="btn btn-circle">申请证书</button>
-                            </ul>
-                        </div>
+            <div class="allpart" style="display: block;">
+                <div class="container">
+                    <div class="nft-container">
+                        <article class="things-wrapper" style="width: 33.3333%;">
+                            <div class="things-container">
+                                <div class="picture-container">
+                                    <img src="img/孔王兴/杭州景色/微信图片_20210201110950_毒霸看图.jpg" alt="" class="picture-test">
+                                    <div class="hover-show">
+                                        <button class="btn btn-circle apply-btn">申请证书</button>
+                                        <button class="btn btn-circle ml-25">详情</button>
+                                    </div>
+                                </div>
+
+                                <div class="inf-container">
+                                    <article class="words-container">
+                                        <p class="name">杭州景色之二</p>
+                                        <p class="authorName">孔王兴</p>
+                                    </article>
+                                </div>
+
+                                <div class="sell-tag">
+                                    <img src="picture/selling.png" style="width: 0.87rem;">
+                                    <span class="sale-text">出售中</span>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
 
-            <div class="close-area">
-                <i class="fa fa-xmark"></i>
+            <div class="allpart" style="display: none;">
+                <div class="container">
+                    <div class="nft-container">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="allpart" style="display: none;">
+                <div class="container">
+                    <div class="nft-container">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="allpart" style="display: none;">
+                <div class="container">
+                    <div class="nft-container">
+
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <section class="wallet-area">
-            <div class="container">
-                <h3 class="section-title">我的钱包</h3>
+    </section>
 
-                <div class="wallet-container">
-                    <div class="content-area">
-                        <p class="text-black">账户总资产（USDT）</p>
-                        <p class="text-24">0</p>
+    <div class="handle-wrapper" style="display: none;">
+        <div class="handle-card">
+            <input type="radio" name="select" id="slide_1" checked>
+            <input type="radio" name="select" id="slide_2">
+            <input type="checkbox" id="sideImg">
+
+            <div class="slider">
+                <label for="slide_1" class="slide slide_1"></label>
+                <label for="slide_2" class="slide slide_2"></label>
+            </div>
+
+            <div class="inner_part">
+                <label for="slideImg" class="img">
+                    <img class="img_1" src="picture/photo.jpg" id="applyImg">
+                </label>
+
+                <div class="content content_1">
+                    <div class="title">作品详情</div>
+                    <div class="text">
+                        <ul>
+                            <li id="apply_Id">NFTId:</li>
+                            <li id="apply_Author">上传者名字:</li>
+                            <li id="apply_CreateAt">上传时间:</li>
+                        </ul>
                     </div>
-    
-                    <img src="picture/exploring.svg">
+                </div>
+            </div>
+
+            <div class="inner_part">
+                <label for="slideImg" class="img">
+                    <img class="img_2" src="picture/photo.jpg">
+                </label>
+
+                <div class="content content_2">
+                    <div class="title">申请证书</div>
+                    <div class="text">
+                        <ul>
+                            <li>申请原因:</li>
+                            <textarea class="reasons"></textarea>
+                            <button class="btn btn-circle" onclick="addIssue()">申请证书</button>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="close-area">
+            <i class="fa fa-xmark"></i>
+        </div>
+    </div>
+
+    <section class="wallet-area">
+        <div class="container">
+            <h3 class="section-title">我的钱包</h3>
+
+            <div class="wallet-container">
+                <div class="content-area">
+                    <p class="text-black">账户总资产（USDT）</p>
+                    <p class="text-24">0</p>
                 </div>
 
-                <ul>
-                    <li>
-                      <a class="putin" href="#">
+                <img src="picture/exploring.svg">
+            </div>
+
+            <ul>
+                <li>
+                    <a class="putin" href="#">
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
                         <p class="words">充值</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="takeout" href="#">
+                    </a>
+                </li>
+                <li>
+                    <a class="takeout" href="#">
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
                         <p class="words">提币</p>
-                      </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-        <footer class="ant-layout-footer footer">
-            <div class="footer-cont">
-                <div class="footer-wrapper">
-                    <div class="code-container">
-                        <div class="school-pic">
-                            <img src="picture/school.jfif">
-                        </div>
-
-                        <a href="javascript:;" >
-                            <i class="fa fa-school"></i>
-                            <span>杭州电子科技大学</span>
-                        </a>
+    <footer class="ant-layout-footer footer">
+        <div class="footer-cont">
+            <div class="footer-wrapper">
+                <div class="code-container">
+                    <div class="school-pic">
+                        <img src="picture/school.jfif">
                     </div>
 
-                    <div class="bor"></div>
-
-                    <div class="links">
-                        <a href="javascript:;" >
-                            <i class="fa fa-envelope"></i>
-                            <span>杭州电子科技大学</span>
-                        </a>
-
-                        <a href="javascript:;" >
-                            <i class="fa-brands fa-weibo"></i>
-                            <span>杭州电子科技大学</span>
-                        </a>
-
-                        <a href="javascript:;" >
-                            <i class="fa-brands fa-twitter-square"></i>
-                            <span>杭州电子科技大学</span>
-                        </a>
-
-                        <a href="javascript:;" >
-                            <i class="fa fa-paper-plane"></i>
-                            <span>杭州电子科技大学</span>
-                        </a>
-                    </div>
-
-                    <div class="bor"></div>
-
-                    <a href="#" class="logo">
-                        <img src="picture/logo.png" alt="" class="logo">
+                    <a href="javascript:;">
+                        <i class="fa fa-school"></i>
+                        <span>杭州电子科技大学</span>
                     </a>
                 </div>
+
+                <div class="bor"></div>
+
+                <div class="links">
+                    <a href="javascript:;">
+                        <i class="fa fa-envelope"></i>
+                        <span>杭州电子科技大学</span>
+                    </a>
+
+                    <a href="javascript:;">
+                        <i class="fa-brands fa-weibo"></i>
+                        <span>杭州电子科技大学</span>
+                    </a>
+
+                    <a href="javascript:;">
+                        <i class="fa-brands fa-twitter-square"></i>
+                        <span>杭州电子科技大学</span>
+                    </a>
+
+                    <a href="javascript:;">
+                        <i class="fa fa-paper-plane"></i>
+                        <span>杭州电子科技大学</span>
+                    </a>
+                </div>
+
+                <div class="bor"></div>
+
+                <a href="#" class="logo">
+                    <img src="picture/logo.png" alt="" class="logo">
+                </a>
             </div>
-        </footer>
-    </body>
-    
-    <script>
-        var allBtn = document.querySelectorAll(".all-area");
-        var allPart = document.querySelectorAll(".allpart");
-        console.log(allPart);
-        console.log(allBtn);
-    
-        for(var i = 0; i < allBtn.length; i++){
-            allBtn[i].onclick = function(){
-                for(var j = 0; j < allBtn.length; j++){
-                    $(allPart[j]).show();
-                    // allPart[j].style.display = "none";
-                }
-                // this.style.display = "block";
+        </div>
+    </footer>
+</body>
+
+<script>
+    var allBtn = document.querySelectorAll(".all-area");
+    var allPart = document.querySelectorAll(".allpart");
+    console.log(allPart);
+    console.log(allBtn);
+
+    for (var i = 0; i < allBtn.length; i++) {
+        allBtn[i].onclick = function () {
+            for (var j = 0; j < allBtn.length; j++) {
+                $(allPart[j]).show();
+                // allPart[j].style.display = "none";
             }
+            // this.style.display = "block";
         }
+    }
 
-        var closeArea = document.querySelector(".close-area");
-        var handleArea = document.querySelector(".handle-wrapper");
-        closeArea.onclick = function() {
-            handleArea.style.display = "none";
-        }
+    var closeArea = document.querySelector(".close-area");
+    var handleArea = document.querySelector(".handle-wrapper");
+    closeArea.onclick = function () {
+        handleArea.style.display = "none";
+    }
 
-        var messageBtn = document.querySelector(".message-btn");
-        var closeBtn = document.querySelector(".close-btn");
-        var sidebarArea = document.querySelector("#notifications");
-        messageBtn.addEventListener("click",function(){
-            sidebarArea.setAttribute("class","sidebar show");
-        })
-        closeBtn.addEventListener("click",function(){
-            sidebarArea.setAttribute("class","sidebar");
-        })
+    var messageBtn = document.querySelector(".message-btn");
+    var closeBtn = document.querySelector(".close-btn");
+    var sidebarArea = document.querySelector("#notifications");
+    messageBtn.addEventListener("click", function () {
+        sidebarArea.setAttribute("class", "sidebar show");
+    })
+    closeBtn.addEventListener("click", function () {
+        sidebarArea.setAttribute("class", "sidebar");
+    })
 
-        var actBtn = document.querySelector("#act-btn");
-        var activities = document.querySelector("#activities");
-        var noteBtn = document.querySelector("#note-btn");
-        var notes = document.querySelector("#notes");
-        var alertBtn = document.querySelector("#alert-btn");
-        var alerts = document.querySelector("#alerts");
-        actBtn.addEventListener("click",function(){
-            notes.setAttribute("class","tab-pane");
-            alerts.setAttribute("class","tab-pane");
-            activities.setAttribute("class","tab-pane active");
-            noteBtn.setAttribute("class","nav-container");
-            alertBtn.setAttribute("class","nav-container");
-            actBtn.setAttribute("class","nav-container active");
-        })
-        noteBtn.addEventListener("click",function(){
-            activities.setAttribute("class","tab-pane");
-            alerts.setAttribute("class","tab-pane");
-            notes.setAttribute("class","tab-pane active");
-            actBtn.setAttribute("class","nav-container");
-            alertBtn.setAttribute("class","nav-container");
-            noteBtn.setAttribute("class","nav-container active");
-        })
-        alertBtn.addEventListener("click",function(){
-            notes.setAttribute("class","tab-pane");
-            activities.setAttribute("class","tab-pane");
-            alerts.setAttribute("class","tab-pane active");
-            noteBtn.setAttribute("class","nav-container");
-            actBtn.setAttribute("class","nav-container");
-            alertBtn.setAttribute("class","nav-container active");
-        })
-    </script>
+    var actBtn = document.querySelector("#act-btn");
+    var activities = document.querySelector("#activities");
+    var noteBtn = document.querySelector("#note-btn");
+    var notes = document.querySelector("#notes");
+    var alertBtn = document.querySelector("#alert-btn");
+    var alerts = document.querySelector("#alerts");
+    actBtn.addEventListener("click", function () {
+        notes.setAttribute("class", "tab-pane");
+        alerts.setAttribute("class", "tab-pane");
+        activities.setAttribute("class", "tab-pane active");
+        noteBtn.setAttribute("class", "nav-container");
+        alertBtn.setAttribute("class", "nav-container");
+        actBtn.setAttribute("class", "nav-container active");
+    })
+    noteBtn.addEventListener("click", function () {
+        activities.setAttribute("class", "tab-pane");
+        alerts.setAttribute("class", "tab-pane");
+        notes.setAttribute("class", "tab-pane active");
+        actBtn.setAttribute("class", "nav-container");
+        alertBtn.setAttribute("class", "nav-container");
+        noteBtn.setAttribute("class", "nav-container active");
+    })
+    alertBtn.addEventListener("click", function () {
+        notes.setAttribute("class", "tab-pane");
+        activities.setAttribute("class", "tab-pane");
+        alerts.setAttribute("class", "tab-pane active");
+        noteBtn.setAttribute("class", "nav-container");
+        actBtn.setAttribute("class", "nav-container");
+        alertBtn.setAttribute("class", "nav-container active");
+    })
+</script>
+
 </html>
-

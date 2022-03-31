@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>杭州景色之一</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="../fontawesome/fontawesome-free-6.0.0-web/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="css/detail.css" rel="stylesheet" type="text/css">
+        <script src="js/detail.js"></script>
+        <script src="js/divide.js"></script>
+    </head>
+
+    <body>
+        <header class="header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="main-nav">
+                            <a herf="" class="logo">
+                                <img src="picture/logo.png" alt="">
+                            </a>
+        
+                            <ul class="nav">
+                                <li><a href="">交易市场</a></li>
+                                <li><a href="">作品上传</a></li>
+                                <li><a href="">私人博物馆</a></li>
+                                <li class="submenu">
+                                    <a href="javascript:;">中文</a>
+                                    <ul>
+                                        <li><a href="">中文</a></li>
+                                        <li><a href="">英文</a></li>
+                                        <!-- 做两个网页，一个中文，一个英文 -->
+                                    </ul>
+                                </li>
+                            </ul>
+        
+                            <a class="menu-trigger">
+                                <span>Menu</span>
+                            </a>
+                            
+                            <ul class="header-buttons">
+                                <li><a class="login-btn" href="javascript:;">登录 / 注册</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="ant-layout">
+            <div class="container">
+                <div class="detail-img">
+                    <div class="detail-img-container">
+                        <div class="ant-img">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="info-container">
+                    <li>
+                        <label>作品名称</label>
+                        <h2 class="break-all"></h2>
+                    </li>
+
+                    <li>
+                        <label>创作者</label>
+                        <h2 class="break-all"></h2>
+                    </li>
+
+                    <li>
+                        <label>价格</label>
+                        <p class="font-bold">
+                            <span class="price"></span>
+                            <span class="changes"><i class="fa-solid fa-rotate-right"></i></span>
+                            <span>VNT</span>
+                        </p>
+                    </li>
+
+                    <li class="buy-button">
+                        <div class="buy">
+                            <button class="ant-button"><span>上架</span></button>
+                        </div>
+
+                        <span class="division"></span>
+
+                        <div class="jvb">
+                            <button class="ant-buttons"><span>碎片化</span></button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label>NFT ID</label>
+                        <p class="nftid"></p>
+                    </li>
+
+                    <li>
+                        <label>作品描述</label>
+                        <p class="content-hide">
+                        </p>
+                    </li>
+
+                    <li>
+                        <label>创作者信息</label>
+                        <p class="content-hide" style="line-height: 1.22rem;"></p>
+                    </li>
+                </ul>
+
+                <div class="ant-progress">
+                    <div class="text">事件记录</div>
+
+                    <div class="lc">
+                        <div class="flex-1">事件</div>
+                        <div class="flex-1">价格</div>
+                        <div class="flex-1">拥有者</div>
+                        <div class="flex-1 flex-right">日期</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="complain-box" style="display: block;">
+            <div class="complain-area">
+                <div class="complain-wrapper">
+                    <div class="side-content">
+                        <div class="side-title">请决定碎片化数：</div>
+                        
+                        <form class="info-box">
+                            <input type="text" id="complains">
+                        </form>
+
+                            <!-- <div class="line-buttons white-one mr-10">
+                                <span><i class="fa fa-upload"></i> 上传附件</span>
+                                <input id="attach" style="visibility: hidden; width: 0px; height: 0px" type="file">
+                            </div> -->
+        
+                        <div class="line-buttons">
+                            <span><i class="fa fa-circle-check"></i> 提交</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="close-btn">
+                <i class="fa fa-xmark"></i>
+            </div>
+        </div>
+
+        <footer class="ant-layout-footer footer">
+            <div class="footer-cont">
+                <div class="footer-wrapper">
+                    <div class="code-container">
+                        <div class="school-pic"></div>
+
+                        <a href="javascript:;" >
+                            <i class="fa fa-school"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+                    </div>
+
+                    <div class="bor"></div>
+
+                    <div class="links">
+                        <a href="javascript:;" >
+                            <i class="fa fa-envelope"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+
+                        <a href="javascript:;" >
+                            <i class="fa-brands fa-weibo"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+
+                        <a href="javascript:;" >
+                            <i class="fa-brands fa-twitter-square"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+
+                        <a href="javascript:;" >
+                            <i class="fa fa-paper-plane"></i>
+                            <span>杭州电子科技大学</span>
+                        </a>
+                    </div>
+
+                    <div class="bor"></div>
+
+                    <a href="#" class="logo">
+                        <img src="picture/logo.png" alt="" class="logo">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+    <script>
+        var complainBtn = document.querySelector(".ant-buttons");
+        var complainArea = document.querySelector(".complain-box");
+        complainBtn.addEventListener("click",function(){
+            complainArea.style.display = "block";
+        });
+        var closeBtn = document.querySelector(".close-btn");
+        closeBtn.addEventListener("click",function(){
+            complainArea.style.display = "none";
+        })
+        var submitBtn = document.querySelector(".line-buttons");
+        submitBtn.addEventListener("click",function(){
+            var nftId = localStorage.getItem("complainId");
+            var cause = document.getElementById("complains").value;
+            alert(cause);
+
+            var settings = {
+                "url": "http://localhost:8080/userFunction/addComplaint",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    "nftId": nftId,
+                    "cause": cause
+                }),
+            };
+
+            $.ajax(settings).done(function (response) {
+            console.log(response);
+            });
+        })
+        
+        var nftId = localStorage.getItem("inforId");
+        function buyNFT(){
+            alert("购买")
+            var settings = {
+                "url": "http://localhost:8080/NFTFunction/buyNFT?nftId="+nftId,
+                "method": "GET",
+                "headers": {
+                    "Authorization": localStorage.getItem("JWT")
+                },
+                "xhrFields": {
+                    withCredentials: true
+                },
+                "timeout": 0,
+            };
+      
+            $.ajax(settings).done(function (response) {
+             console.log(response);
+      });
+}
+    </script>
+</html>

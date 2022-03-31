@@ -22,6 +22,9 @@ $.ajax(settings).done(function (response) {
     var i;
     for (i = 0; i < getJsonLength(response); i++) {
         var nftId = response[i].nftId;
+        localStorage.setItem("applyNFTId", nftId);
+        localStorage.setItem("author", response[i].authorName);
+        localStorage.setItem("createAt", response[i].nftCreateAt)
         var allThing = document.createElement("article");
         allThing.setAttribute("class", "things-wrapper");
         //allThing.setAttribute("style","width = 33.3333%");
@@ -29,21 +32,28 @@ $.ajax(settings).done(function (response) {
         var thingContainer = document.createElement("div");
         thingContainer.setAttribute("class", "things-container");
         var imgContainer = document.createElement("div");
-        var img = document.createElement("img");
         imgContainer.setAttribute("class", "picture-container");
+        var img = document.createElement("img");
         //img.style.backgroundImage.url = response[i].showFile;
         console.log(response[i].showFile);
         img.setAttribute("src", response[i].showFile);
-        img.setAttribute("class","picture-test")
+        localStorage.setItem("img" + nftId, response[i].showFile);
+        img.setAttribute("class", "picture-test")
         imgContainer.appendChild(img);
 
         var hoverShow = document.createElement("div");
-        hoverShow.setAttribute("class","hover-show");
+        hoverShow.setAttribute("class", "hover-show");
         var btn1 = document.createElement("button");
         var btn2 = document.createElement("button");
-        btn1.setAttribute("class","btn btn-circle apply-btn");
-        btn1.setAttribute("onclick","send()");
-        btn2.setAttribute("class","btn btn-circle ml-25");
+        btn1.setAttribute("class", "btn btn-circle apply-btn");
+        //btn1.setAttribute("onclick", "send()");
+        btn1.innerHTML = "申请证书"
+        btn2.setAttribute("class", "btn btn-circle ml-25");
+        btn2.innerHTML = "查看详情"
+
+        //var sideImg = document.querySelector(".img_1");
+
+        btn1.setAttribute("onclick", "apply(" + nftId + ")")
         hoverShow.appendChild(btn1);
         hoverShow.appendChild(btn2);
 
@@ -105,7 +115,8 @@ $.ajax(settings).done(function (response) {
             thingContainer.appendChild(sellTag);
         }
 
-        thingContainer.appendChild(img);
+        //thingContainer.appendChild(img);
+        thingContainer.appendChild(imgContainer);
         thingContainer.appendChild(inforBox);
         allThing.appendChild(thingContainer);
 
@@ -563,6 +574,26 @@ function syc(nftId) {
     window.location = "./syc.html"
 }
 
-function send() {
-    localStorage.setItem("itemId",nftId);
+// function send() {
+//     localStorage.setItem("itemId", nftId);
+// }
+function apply(nftId) {
+    var handleArea = document.querySelector(".handle-wrapper");
+    var applyImg = document.getElementById("applyImg")
+    var applyId = localStorage.getItem("applyNFTId");
+    var author = localStorage.getItem("author");
+    var createAt = localStorage.getItem("createAt")
+
+    var apply_Id = document.getElementById("apply_Id");
+    var apply_Author = document.getElementById("apply_Author");
+    var apply_CreateAt = document.getElementById("apply_CreateAt");
+    apply_Id.innerHTML = "NFTId：" + applyId;
+    apply_Author.innerHTML = "上传者名字：" + author;
+    apply_CreateAt.innerHTML = "上传时间：" + createAt
+
+    handleArea.style.display = "block";
+    localStorage.setItem("itemId", nftId);
+    showFile = localStorage.getItem("img" + nftId);
+
+    applyImg.setAttribute("src", showFile)
 }
